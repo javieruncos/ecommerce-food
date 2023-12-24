@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css"
+import Menu from './components/common/Menu'
+import Inicio from './components/view/Inicio'
 
 function App() {
- 
+
 
   return (
     <>
-      <div>
-         <h1>FOOD</h1>
+      <div className='App'>
+        <Menu></Menu>
+       <Inicio></Inicio>
       </div>
     </>
   )
