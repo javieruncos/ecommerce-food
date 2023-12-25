@@ -1,39 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import "../../style/view/Inicio.css"
+import useChange from '../../hooks/useChange';
 
 const Inicio = () => {
 
-    const [bgImage, setBgImage] = useState([
-        "https://th.bing.com/th/id/OIP.2G01lVcK8JWA9UFMTtDZzgHaFj?rs=1&pid=ImgDetMain",
-        "https://excursionvietnam.com/uploads/Saigon_Street_food_(1).jpg",
-        "https://www.travelvui.com/wp-content/uploads/2016/08/best-street-food-in-bangkok.jpg",
-    ]);
+    const { bgImage, indexImg } = useChange()
 
-    const [indexImg, setIndexImg] = useState(0);
-
-    useEffect(() => {
-        const changeImg = () => {
-            setIndexImg((index) => (index === bgImage.length - 1 ? 0 : index + 1));
-        };
-
-        const interval = setInterval(changeImg, 2000);
-
-        // Limpia el intervalo al desmontar el componente para evitar fugas de memoria
-        return () => clearInterval(interval);
-    }, [bgImage]);
+    const estilos = {
+        backgroundImage: `url(${bgImage[indexImg]})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+    }
 
 
     return (
         <section>
-            <div
-                style={{
-                    backgroundImage: `url(${bgImage[indexImg]})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '100vh',
-                }}
-            >
-
+            <div style={estilos} className='PortadaInicio'>
+                <div className='containerTitle-portada'>
+                    <div className='title-Portada'>
+                        <h1 className='display-1 fw-bold'>Indulge in the delights of authentic</h1>
+                        <p className='display-1 fw-bold text-light'>street food!</p>
+                        <p className='text-light'>
+                            We take pride in offering a wide variety of mouthwatering dishes that are made with only the
+                            freshest and highest quality ingredients.
+                        </p>
+                    </div>
+                    <div className='containerBtn-portada'>
+                        <button className='btnPortada'>Visitanos Hoy</button>
+                        <button className='btnPortada'>Ver Menu</button>
+                    </div>
+                </div>
             </div>
         </section>
     );
