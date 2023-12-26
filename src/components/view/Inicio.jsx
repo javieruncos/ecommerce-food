@@ -3,6 +3,7 @@ import "../../style/view/Inicio.css"
 import useChange from '../../hooks/useChange';
 import LocalOpen from '../LocalOpen';
 import SliderGalery from '../SliderGalery';
+import CardProducts from '../products/CardProducts';
 
 const Inicio = () => {
 
@@ -50,6 +51,40 @@ const Inicio = () => {
                         </div>
                     </div>
                     <SliderGalery></SliderGalery>
+                </article>
+                <article>
+                    <div className='my-5 container'>
+                        <h3 className='text-center display-4'>Nuestro Menu</h3>
+                        <div className='row mt-5'>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                             <div className='col-12 col-md-4 col-lg-4'>
+                                <CardProducts></CardProducts>
+                             </div>
+                        </div>
+                    </div>
                 </article>
             </section>
         </>
