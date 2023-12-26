@@ -13,9 +13,9 @@ const CardProducts = () => {
                 </div>
             </div>
             <div className='cardBody-product container pt-4'>
-                <p className='fs-5'>Pasta clasica</p>
+                <p className='fs-5 fw-bold'>Pasta clasica</p>
                 <p>Two meatballs, onion, pickles, cabbage, sauce, salad, bun, onion</p>
-                <p className='fs-4'>$ 14.99 USD</p>
+                <p className='fs-4 fw-bold'>$ 14.99 USD</p>
             </div>
         </div>
     );

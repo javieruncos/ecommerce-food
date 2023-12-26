@@ -69,6 +69,48 @@
     background-color: white;
  }
 
+ .portadaUbicacion{
+    height: 500px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+ }
+
+ .portadaUbicacion img{
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .capaUbicacion{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.438);
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+ }
+
+ .btn-Ubicacion{
+   padding: 10px 30px;
+   border: 1px solid transparent;
+   border-radius: 10px;
+   background-color: yellow;
+   transition: 0.7s ease;
+ }
+
+ .btn-Ubicacion:hover{
+    background-color: black;
+    color: yellow;
+    border: 1px solid yellow;
+ }
+
+ /* ********************************************************************** */
+
+
  @media (max-width: 320px){
     .title-Portada {
         height: 450px;

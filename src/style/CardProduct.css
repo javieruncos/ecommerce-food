@@ -13,10 +13,14 @@
     scale: 1.05;
 }
 
-.cardProducts:hover img {
-    scale: 1.1;
+.cardProducts:hover img , .btnProduct{
+    scale: 1.3;
     transition: 0.5s ease;
 
+}
+
+.cardProducts:hover .btnProduct {
+    opacity: 1;
 }
 
 
@@ -38,7 +42,6 @@
 .containerBtn {
     height: 100%;
     width: 100%;
-    /* background-color: red; */
     position: absolute;
     top: 0;
     display: flex;
@@ -65,13 +68,6 @@
     width: 50px;
 }
 
-.imgCard:hover .btnProduct {
-    opacity: 1;
-}
-
-
-
 .cardBody-product {
     height: 40%;
-    font-weight: bold;
 }
