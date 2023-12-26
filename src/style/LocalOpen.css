@@ -1,0 +1,19 @@
+.seccion-Open{
+    /* height: 500px; */
+    width: 100%;
+    background-color: yellow;
+}
+
+
+.cardLocales{
+    height: 370px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.fechaCard{
+    padding: 10px 20px;
+    background-color: bisque;
+    border-radius: 10px;
+}

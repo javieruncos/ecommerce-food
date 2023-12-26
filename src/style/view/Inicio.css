@@ -1,5 +1,5 @@
 .PortadaInicio{
-    height: 550px;
+    height: 560px;
     width: 100%;
     background-color: yellow;
     position: relative;
@@ -7,9 +7,8 @@
     
 }
 
-
 .containerTitle-portada{
-    height: 550px;
+    height: 560px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.596);
     text-align: center;
@@ -37,7 +36,41 @@
 .btnPortada{
     height: 50px;
     width: 150px;
-    border: none;
+    border: 1px solid yellow;
     border-radius: 10px;
     margin-bottom: 50px;
+    background-color: #191919;
+    color: white;
+    transition: 0.5s ease;
 }
+
+.btnPortada:hover{
+   background-color: yellow;
+   color: black;
+}
+
+.btnPortada2{
+    height: 50px;
+    width: 150px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: yellow;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.btnPortada2:hover{
+    background-color:#191919;
+    color: yellow;
+ }
+
+ @media screen and (min-widht:404px) ,(max-width:767px) {
+    .title-Portada {
+        height: 450px;
+        width: 312px;
+        color: yellow;
+        font-weight: bold;
+        padding-top: 50px;
+    }
+ }

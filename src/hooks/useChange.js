@@ -4,9 +4,9 @@ import { useState,useEffect } from "react";
 const useChange = () => {
 
   const [bgImage, setBgImage] = useState([
-    "https://th.bing.com/th/id/OIP.2G01lVcK8JWA9UFMTtDZzgHaFj?rs=1&pid=ImgDetMain",
-    "https://excursionvietnam.com/uploads/Saigon_Street_food_(1).jpg",
-    "https://www.travelvui.com/wp-content/uploads/2016/08/best-street-food-in-bangkok.jpg",
+    "https://images.pexels.com/photos/3738755/pexels-photo-3738755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/845812/pexels-photo-845812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/681586/sushi-japan-soya-rice-681586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   ]);
 
   const [indexImg, setIndexImg] = useState(0);
