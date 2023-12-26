@@ -1,5 +1,5 @@
 .seccion-Open{
-    /* height: 500px; */
+    height: 700px;
     width: 100%;
     background-color: yellow;
 }
@@ -16,4 +16,21 @@
     padding: 10px 20px;
     background-color: bisque;
     border-radius: 10px;
+}
+
+@media screen and (max-width:767px) {
+
+    .cardLocales{
+        height: 400px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+    .seccion-Open{
+        height: 100%;
+        width: 100%;
+        background-color: yellow;
+    }
+    
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../../style/view/Inicio.css"
 import useChange from '../../hooks/useChange';
 import LocalOpen from '../LocalOpen';
+import SliderGalery from '../SliderGalery';
 
 const Inicio = () => {
 
@@ -35,7 +36,21 @@ const Inicio = () => {
                 </div>
             </section>
             <section>
-              <LocalOpen></LocalOpen>
+                <LocalOpen></LocalOpen>
+            </section>
+            <section className='seccionGalery'>
+                <article className=' pt-5'>
+                    <div className='container my-4'>
+                        <div className='titleGaleria'>
+                            <h3 className='display-3'>Galeria</h3>
+                            <p>Síguenos en redes sociales para estar al día con
+                                nuestra ubicación y menú, o ven a visitarnos en <br />
+                                persona ¡y descubre tu nueva comida favorita!
+                            </p>
+                        </div>
+                    </div>
+                    <SliderGalery></SliderGalery>
+                </article>
             </section>
         </>
 
