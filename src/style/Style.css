@@ -37,14 +37,16 @@
 
   @media screen and (max-width:767px) {
     .swiper {
-        width: 1230px;
+        width: 1430px;
         height: 400px;
       }
 
-      .itemSlide{
-        width: 400px;
+      .containerSlide{
+        overflow: hidden;
         height: 300px;
-        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
    

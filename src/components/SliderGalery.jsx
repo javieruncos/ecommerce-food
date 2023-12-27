@@ -36,11 +36,11 @@ const imgSlider = [
 
 const SliderGalery = () => {
     return (
-        <div className='mt-5 containerSlide'>
+        <div className='mt-4 containerSlide'>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                pagination={{ clickable: true, }}
+                // pagination={{ clickable: true, }}
                 modules={[Pagination]}
                 loop={true}
                 autoplay={{

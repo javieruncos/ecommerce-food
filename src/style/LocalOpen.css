@@ -4,6 +4,9 @@
     background-color: yellow;
 }
 
+.seccion-Open h2{
+    font-family: 'Permanent Marker', cursive;
+}
 
 .cardLocales{
     height: 370px;
@@ -16,6 +19,16 @@
     padding: 10px 20px;
     background-color: bisque;
     border-radius: 10px;
+}
+
+.provinciaName{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 23px;
+
+}
+
+.horaCards{
+    font-family: 'Permanent Marker', cursive;
 }
 
 @media screen and (max-width:767px) {
@@ -31,6 +44,11 @@
         height: 100%;
         width: 100%;
         background-color: yellow;
+    }
+
+    .provinciaName{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 16px;
     }
     
 }
