@@ -1,0 +1,165 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombreProducto": "Hamburguesa Clásica",
+        "precio": 5.99,
+        "categoria": "Clásica",
+        "imagen": "url_imagen1.jpg",
+        "ingredientes": ["Carne de res", "Queso cheddar", "Lechuga", "Tomate", "Cebolla", "Mayonesa", "Pan"]
+      },
+      {
+        "id": 2,
+        "nombreProducto": "Hamburguesa con Queso",
+        "precio": 6.99,
+        "categoria": "Con Queso",
+        "imagen": "url_imagen2.jpg",
+        "ingredientes": ["Carne de res", "Queso suizo", "Lechuga", "Tomate", "Cebolla", "Mayonesa", "Pan"]
+      },
+      {
+        "id": 3,
+        "nombreProducto": "Hamburguesa BBQ",
+        "precio": 7.49,
+        "categoria": "BBQ",
+        "imagen": "url_imagen3.jpg",
+        "ingredientes": ["Carne de res", "Bacon", "Queso cheddar", "Cebolla caramelizada", "Salsa BBQ", "Lechuga", "Pan"]
+      },
+      {
+        "id": 4,
+        "nombreProducto": "Hamburguesa Vegetariana",
+        "precio": 8.99,
+        "categoria": "Vegetariana",
+        "imagen": "url_imagen4.jpg",
+        "ingredientes": ["Filete de soja", "Queso vegano", "Lechuga", "Tomate", "Cebolla", "Mayonesa vegana", "Pan integral"]
+      },
+      {
+        "id": 5,
+        "nombreProducto": "Hamburguesa Doble",
+        "precio": 9.99,
+        "categoria": "Doble",
+        "imagen": "url_imagen5.jpg",
+        "ingredientes": ["Doble carne de res", "Doble queso cheddar", "Lechuga", "Tomate", "Cebolla", "Mayonesa", "Pan"]
+      },
+      {
+        "id": 6,
+        "nombreProducto": "Hamburguesa de Pollo",
+        "precio": 7.99,
+        "categoria": "Pollo",
+        "imagen": "url_imagen6.jpg",
+        "ingredientes": ["Pechuga de pollo", "Queso suizo", "Lechuga", "Tomate", "Cebolla", "Mayonesa", "Pan de sésamo"]
+      },
+      {
+        "id": 7,
+        "nombreProducto": "Hamburguesa Picante",
+        "precio": 8.49,
+        "categoria": "Picante",
+        "imagen": "url_imagen7.jpg",
+        "ingredientes": ["Carne de res picante", "Queso pepper jack", "Chiles jalapeños", "Lechuga", "Tomate", "Cebolla", "Pan de maíz"]
+      },
+      {
+        "id": 8,
+        "nombreProducto": "Hamburguesa Hawaiana",
+        "precio": 9.49,
+        "categoria": "Hawaiana",
+        "imagen": "url_imagen8.jpg",
+        "ingredientes": ["Carne de res", "Queso suizo", "Piña", "Lechuga", "Tomate", "Cebolla", "Mayonesa"]
+      },
+      {
+        "id": 9,
+        "nombreProducto": "Hamburguesa con Champiñones",
+        "precio": 8.99,
+        "categoria": "Con Champiñones",
+        "imagen": "url_imagen9.jpg",
+        "ingredientes": ["Carne de res", "Champiñones salteados", "Queso suizo", "Lechuga", "Tomate", "Cebolla", "Mayonesa"]
+      },
+      {
+        "id": 10,
+        "nombreProducto": "Hamburguesa Deluxe",
+        "precio": 10.99,
+        "categoria": "Deluxe",
+        "imagen": "url_imagen10.jpg",
+        "ingredientes": ["Carne de res", "Bacon crujiente", "Huevo frito", "Queso cheddar", "Lechuga", "Tomate", "Mayonesa trufada"]
+      },
+      {
+        "id": 11,
+        "nombreProducto": "Pizza Margarita",
+        "precio": 8.99,
+        "categoria": "Clásica",
+        "imagen": "url_imagen_pizza1.jpg",
+        "ingredientes": ["Mozzarella", "Tomate fresco", "Albahaca", "Aceite de oliva"]
+      },
+      {
+        "id": 12,
+        "nombreProducto": "Pizza Pepperoni",
+        "precio": 10.99,
+        "categoria": "Con Pepperoni",
+        "imagen": "url_imagen_pizza2.jpg",
+        "ingredientes": ["Mozzarella", "Pepperoni", "Tomate salsa", "Aceitunas", "Orégano"]
+      },
+      {
+        "id": 13,
+        "nombreProducto": "Pizza Vegetariana",
+        "precio": 9.49,
+        "categoria": "Vegetariana",
+        "imagen": "url_imagen_pizza3.jpg",
+        "ingredientes": ["Mozzarella", "Tomate fresco", "Pimiento", "Champiñones", "Aceitunas", "Cebolla", "Albahaca"]
+      },
+      {
+        "id": 14,
+        "nombreProducto": "Pizza BBQ Chicken",
+        "precio": 11.99,
+        "categoria": "BBQ",
+        "imagen": "url_imagen_pizza4.jpg",
+        "ingredientes": ["Mozzarella", "Pollo a la BBQ", "Cebolla roja", "Cilantro", "Salsa BBQ"]
+      },
+      {
+        "id": 15,
+        "nombreProducto": "Pizza Hawaiana",
+        "precio": 10.49,
+        "categoria": "Hawaiana",
+        "imagen": "url_imagen_pizza5.jpg",
+        "ingredientes": ["Mozzarella", "Jamón", "Piña", "Salsa de tomate"]
+      },
+      {
+        "id": 16,
+        "nombreProducto": "Pizza Four Cheese",
+        "precio": 12.99,
+        "categoria": "Quesos",
+        "imagen": "url_imagen_pizza6.jpg",
+        "ingredientes": ["Mozzarella", "Queso cheddar", "Queso feta"]
+      },
+      {
+        "id": 17,
+        "nombreProducto": "Pizza Supreme",
+        "precio": 13.49,
+        "categoria": "Suprema",
+        "imagen": "url_imagen_pizza7.jpg",
+        "ingredientes": ["Mozzarella", "Pepperoni", "Champiñones", "Pimiento", "Aceitunas", "Cebolla"]
+      },
+      {
+        "id": 18,
+        "nombreProducto": "Pizza Mexican",
+        "precio": 11.99,
+        "categoria": "Mexicana",
+        "imagen": "url_imagen_pizza8.jpg",
+        "ingredientes": ["Mozzarella", "Carne molida", " jalapeños", "Maíz", "Cebolla ", "salsa"]
+      },
+      {
+        "id": 19,
+        "nombreProducto": "Pizza Mediterranean",
+        "precio": 12.99,
+        "categoria": "Mediterránea",
+        "imagen": "url_imagen_pizza9.jpg",
+        "ingredientes": ["Mozzarella", "Aceitunas negras", "Tomate seco", "Albahaca", "Queso feta", "Cebolla roja", "Aceite de oliva"]
+      },
+      {
+        "id": 20,
+        "nombreProducto": "Pizza BBQ Vegana",
+        "precio": 10.99,
+        "categoria": "Vegana",
+        "imagen": "url_imagen_pizza10.jpg",
+        "ingredientes": ["Queso vegano", "Pollo vegano a la BBQ", "Cebolla morada", "Pimiento", "Champiñones", "Tomate cherry", "Salsa BBQ vegana"]
+      }
+    ]
+  }
+  

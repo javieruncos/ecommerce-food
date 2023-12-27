@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../../style/view/MenuProduct.css"
+import CardProducts from "../products/CardProducts"
+import { obtenerProductos } from '../../helper/productos';
+import Ubicacion from '../Ubicacion';
 
 const MenuProducts = () => {
+
+    const [productosMenu, setProductosMenu] = useState([])
+
+    useEffect(() => {
+        obtenerProductos().then((respueta) => {
+            console.log(respueta)
+            setProductosMenu(respueta)
+            console.log(productosMenu)
+        })
+    }, [])
+
+
+
     return (
         <section>
             <div className="PortadaMenu">
@@ -37,6 +53,25 @@ const MenuProducts = () => {
                         </div>
                     </div>
                 </div>
+            </article>
+            <article>
+                <div className='container'>
+                    <div className='row'>
+                        {
+                            productosMenu.map(item => {
+                                return <>
+                                    <div className='col-12 col-md-4 col-lg-4' key={item.id}>
+                                        <CardProducts producto={item}></CardProducts>
+                                    </div>
+                                </>
+                            })
+                        }
+                    </div>
+
+                </div>
+            </article>
+            <article className='my-5'>
+                <Ubicacion></Ubicacion>
             </article>
         </section>
     );

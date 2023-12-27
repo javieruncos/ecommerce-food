@@ -1,7 +1,9 @@
 import React from 'react';
 import "../../style/CardProduct.css"
 import cubiertos from "../../assets/TablerToolsKitchen2.png"
-const CardProducts = () => {
+
+
+const CardProducts = ({ producto }) => {
     return (
         <div className='cardProducts my-4'>
             <div className='imgCard'>
@@ -13,9 +15,19 @@ const CardProducts = () => {
                 </div>
             </div>
             <div className='cardBody-product container pt-4'>
-                <p className='fs-5 fw-bold'>Pasta clasica</p>
-                <p>Two meatballs, onion, pickles, cabbage, sauce, salad, bun, onion</p>
-                <p className='fs-4 fw-bold'>$ 14.99 USD</p>
+                <p className='fs-5 fw-bold'>{producto.nombreProducto}</p>
+                <div className='ingrediente'>
+                  <ul className='listaProducto'>
+                    {
+                     producto.ingredientes.map(item=>{
+                        return <>
+                        <li>{item},</li>
+                        </>
+                     })
+                    }
+                  </ul>
+                </div>
+                <p className='fs-4 fw-bold mt-2'>$ 14.99 USD</p>
             </div>
         </div>
     );
