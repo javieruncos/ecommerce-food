@@ -43,23 +43,14 @@ const SliderGalery = () => {
                 }}
                 className="mySwiper"
             >
-
                 {
-
-                    imgSlider.map((item, index) => {
+                    imgSlider.map((item, index) => 
                         <SwiperSlide >
                             <div className='itemSlide' key={index}>
                                 <img src={item.imagen} alt="imagen de la galeria" />
                             </div>
                         </SwiperSlide>
-                    })
-                    // imgSlider.map((item ,index =>
-                    //     <SwiperSlide >
-                    //         <div className='itemSlide' key={item.id}> 
-                    //             <img src={item.imagen} alt="imagen de la galeria" />
-                    //         </div>
-                    //     </SwiperSlide>
-                    // ))
+                  )
                 }
             </Swiper>
         </div >
