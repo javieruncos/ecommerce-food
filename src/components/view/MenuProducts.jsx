@@ -2,21 +2,17 @@ import React, { useEffect, useState } from 'react';
 import "../../style/view/MenuProduct.css"
 import CardProducts from "../products/CardProducts"
 import Ubicacion from '../Ubicacion';
-import { obtenerProductos } from '../../helper/productos';
+import useProducto from '../../hooks/useProducto';
+import useFiltraProductos from '../../hooks/useFiltraProductos';
 
 const MenuProducts = () => {
+    const { listaProductos } = useProducto()
+    const {filtrarProductos,filtro,setFiltro} = useFiltraProductos()
+    const productosFiltrados = filtrarProductos(listaProductos)
 
-    const [productosMenu, setProductosMenu] = useState([])
-
-    useEffect(() => {
-        obtenerProductos().then((respueta) => {
-            console.log(respueta)
-            setProductosMenu(respueta)
-            console.log(productosMenu)
-        })
-    }, [])
-
-
+    const categoriaFiltrada = (text)=>{
+       setFiltro({...filtro, categoria:text})
+    }
 
     return (
         <section>
@@ -35,21 +31,11 @@ const MenuProducts = () => {
                 <div>
                     <div className='navCategoria-Menu my-4 container'>
                         <div>
-                            <button className='btn-navMenu'>
-                                Todos
-                            </button>
-                            <button className='btn-navMenu'>
-                                hambueguesas
-                            </button>
-                            <button className='btn-navMenu'>
-                                Pastas
-                            </button>
-                            <button className='btn-navMenu'>
-                                Pizza
-                            </button>
-                            <button className='btn-navMenu'>
-                                Pollo
-                            </button>
+                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("All")}}>Todos</button>
+                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("Hamburguesa")}} >hambueguesas</button>
+                            <button className='btn-navMenu'>Pastas</button>
+                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("pizza")}}>Pizza</button>
+                            <button className='btn-navMenu'>Pollo</button>
                         </div>
                     </div>
                 </div>
@@ -58,7 +44,10 @@ const MenuProducts = () => {
                 <div className='container'>
                     <div className='row'>
                         {
-                            productosMenu.map(item =><CardProducts producto={item} key={item.id}></CardProducts>)
+                          (  filtro.categoria === "All" )? listaProductos.map((item)=>
+                             <CardProducts producto={item} key={item.id}></CardProducts>
+                            ):
+                            productosFiltrados.map(item => <CardProducts producto={item} key={item.id}></CardProducts>)
                         }
                     </div>
 
