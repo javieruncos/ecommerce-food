@@ -5,9 +5,10 @@ import LocalOpen from '../LocalOpen';
 import SliderGalery from '../SliderGalery';
 import CardProducts from '../products/CardProducts';
 import Ubicacion from '../Ubicacion';
+import useProducto from '../../hooks/useProducto';
 
 const Inicio = () => {
-
+    const { listaProductos } = useProducto()
     const { bgImage, indexImg } = useChange()
 
     const estilos = {
@@ -58,41 +59,19 @@ const Inicio = () => {
                     <div className='my-5 container'>
                         <h3 className='text-center display-4 fuenteInicio'>Nuestro Menu</h3>
                         <div className='row mt-5'>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
-                             <div className='col-12 col-md-4 col-lg-4'>
-                                <CardProducts></CardProducts>
-                             </div>
+                            {
+                                listaProductos.map(producto =>
+                                    <CardProducts producto={producto} key={producto.id}></CardProducts>
+                                )
+                            }
                         </div>
                     </div>
                 </article>
                 <article>
-                   <Ubicacion></Ubicacion>
+                    <Ubicacion></Ubicacion>
                 </article>
             </section>
-            
+
         </>
 
     );

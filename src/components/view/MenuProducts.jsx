@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../../style/view/MenuProduct.css"
 import CardProducts from "../products/CardProducts"
-import { obtenerProductos } from '../../helper/productos';
 import Ubicacion from '../Ubicacion';
+import { obtenerProductos } from '../../helper/productos';
 
 const MenuProducts = () => {
 
@@ -58,13 +58,7 @@ const MenuProducts = () => {
                 <div className='container'>
                     <div className='row'>
                         {
-                            productosMenu.map(item => {
-                                return <>
-                                    <div className='col-12 col-md-4 col-lg-4' key={item.id}>
-                                        <CardProducts producto={item}></CardProducts>
-                                    </div>
-                                </>
-                            })
+                            productosMenu.map(item =><CardProducts producto={item} key={item.id}></CardProducts>)
                         }
                     </div>
 

@@ -37,12 +37,7 @@ const imgSlider = [
 const SliderGalery = () => {
     return (
         <div className='mt-4 containerSlide'>
-            <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                // pagination={{ clickable: true, }}
-                modules={[Pagination]}
-                loop={true}
+            <Swiper slidesPerView={3} spaceBetween={30} modules={[Pagination]} loop={true}
                 autoplay={{
                     disableOnInteraction: false,
                 }}
@@ -50,13 +45,21 @@ const SliderGalery = () => {
             >
 
                 {
-                    imgSlider.map((item =>
+
+                    imgSlider.map((item, index) => {
                         <SwiperSlide >
-                            <div className='itemSlide'> 
-                                <img src={item.imagen} alt="" />
+                            <div className='itemSlide' key={index}>
+                                <img src={item.imagen} alt="imagen de la galeria" />
                             </div>
                         </SwiperSlide>
-                    ))
+                    })
+                    // imgSlider.map((item ,index =>
+                    //     <SwiperSlide >
+                    //         <div className='itemSlide' key={item.id}> 
+                    //             <img src={item.imagen} alt="imagen de la galeria" />
+                    //         </div>
+                    //     </SwiperSlide>
+                    // ))
                 }
             </Swiper>
         </div >
