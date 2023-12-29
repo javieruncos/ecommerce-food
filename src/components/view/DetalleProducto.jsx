@@ -1,9 +1,24 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import "../../style/view/DetalleProducto.css"
+import { obtenerProductoId } from '../../helper/productos';
+import { useParams } from 'react-router-dom';
 
 const DetalleProducto = () => {
+
+    const [productoDetalle, setProductoDetalle] = useState({})
+    const { id } = useParams()
+
+    useEffect(() => {
+        obtenerProductoId(id).then((respuesta) => {
+            console.log(respuesta)
+            setProductoDetalle(respuesta.response)
+
+        })
+    }, [])
+
     return (
-        <div className='container'>
+        <section className='container'>
             <div className='detalleContainer'>
                 <div className='row mt-5'>
                     <div className='col-12 col-md-6 col-lg-6'>
@@ -16,19 +31,22 @@ const DetalleProducto = () => {
                     </div>
                     <div className='col-12 col-md-6 col-lg-6'>
                         <div className='detalleProducto container '>
-                            <span className='d-block fs-1 mb-2'>Hamburguesa</span>
-                            <span className='fs-4'>Ingredientes</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                                ex et! Mollitia, dignissimos nesciunt animi aperiam quae aliquam
-                                vitae consequatur exercitationem molestias saepe laudantium, alias
-                                adipisci. Cupiditate esse quod eos.
-                            </p>
+                            <span className='d-block fs-1 mb-2 fuente-detalle'>{productoDetalle.nombreProducto}</span>
+                            <span className='fs-4 fuente-detalle'>Ingredientes</span>
+                            <ul className='listDetalle'>
+                                {
+                                    productoDetalle?.ingredientes?.map((item) => (
+                                        <li key={item}>{item},</li>
+                                    ))
+                                }
+
+                            </ul>
                             <div>
-                                <span className='fs-3'>Precio</span>
-                                <p className='fs-3 fw-bold'>$12.00</p>
+                                <span className='fs-3 fuente-detalle'>Precio</span>
+                                <p className='fs-3 fw-bold precioDetalle'>$12.00</p>
                             </div>
 
-                            <span className='fs-3'>Cantidad</span>
+                            <span className='fs-3 fuente-detalle'>Cantidad</span>
                             <div className='containerAdd'>
                                 <div className='cantidadProducto '>
                                     <span>1</span>
@@ -39,11 +57,17 @@ const DetalleProducto = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-        </div>
+            <article>
+                <div className='mt-5'>
+                    <h3 className='fs-1 fuente-detalle'>Acerca del producto</h3>
+                    <p>
+                        {productoDetalle.descripcion}
+                    </p>
+                </div>
+            </article>
+        </section>
     );
 };
 
