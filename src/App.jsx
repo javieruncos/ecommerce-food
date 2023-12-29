@@ -5,6 +5,7 @@ import Menu from './components/common/Menu'
 import Inicio from './components/view/Inicio'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MenuProducts from './components/view/MenuProducts'
+import DetalleProducto from './components/view/DetalleProducto'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={ <Inicio></Inicio>}></Route>
             <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
+            <Route path='/detalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
           </Routes>
         </BrowserRouter>
       </div>
