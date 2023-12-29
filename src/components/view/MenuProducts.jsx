@@ -7,11 +7,11 @@ import useFiltraProductos from '../../hooks/useFiltraProductos';
 
 const MenuProducts = () => {
     const { listaProductos } = useProducto()
-    const {filtrarProductos,filtro,setFiltro} = useFiltraProductos()
+    const { filtrarProductos, filtro, setFiltro } = useFiltraProductos()
     const productosFiltrados = filtrarProductos(listaProductos)
 
-    const categoriaFiltrada = (text)=>{
-       setFiltro({...filtro, categoria:text})
+    const categoriaFiltrada = (text) => {
+        setFiltro({ ...filtro, categoria: text })
     }
 
     return (
@@ -31,11 +31,11 @@ const MenuProducts = () => {
                 <div>
                     <div className='navCategoria-Menu my-4 container'>
                         <div>
-                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("All")}}>Todos</button>
-                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("Hamburguesa")}} >hambueguesas</button>
-                            <button className='btn-navMenu'>Pastas</button>
-                            <button className='btn-navMenu' onClick={()=>{categoriaFiltrada("pizza")}}>Pizza</button>
-                            <button className='btn-navMenu'>Pollo</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("All") }}>Todos</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("Hamburguesa") }} >hambueguesas</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pasta") }} >Pastas</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pizza") }}>Pizza</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pollo") }} >Pollo</button>
                         </div>
                     </div>
                 </div>
@@ -44,13 +44,11 @@ const MenuProducts = () => {
                 <div className='container'>
                     <div className='row'>
                         {
-                          (  filtro.categoria === "All" )? listaProductos.map((item)=>
-                             <CardProducts producto={item} key={item.id}></CardProducts>
-                            ):
-                            productosFiltrados.map(item => <CardProducts producto={item} key={item.id}></CardProducts>)
+                            (filtro.categoria === "All" ? listaProductos : productosFiltrados).map((item) => (
+                                <CardProducts producto={item} key={item.id} />
+                            ))
                         }
                     </div>
-
                 </div>
             </article>
             <article className='my-5'>

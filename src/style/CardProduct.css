@@ -13,7 +13,8 @@
     scale: 1.05;
 }
 
-.cardProducts:hover img , .btnProduct{
+.cardProducts:hover img,
+.btnProduct {
     scale: 1.3;
     transition: 0.5s ease;
 
@@ -25,7 +26,7 @@
 
 
 .imgCard {
-    height: 60%;
+    height: 50%;
     width: 100%;
     background-color: aqua;
     border-radius: 10px;
@@ -63,7 +64,7 @@
     transition: 0.5s ease;
 }
 
-.btnProduct img{
+.btnProduct img {
     height: 50px;
     width: 50px;
 }
@@ -72,22 +73,23 @@
     height: 40%;
 }
 
-.ingrediente{
-    display: flex;
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 100%;
-    font-size: 13px;
-    letter-spacing: 3px;
-    overflow: hidden;
+.ingrediente {
+    height: 100px;
+    font-size: 15px;
 }
 
-.listaProducto{
+.listaProducto {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    font-size: 10px;
-    gap: 5px;
     list-style: none;
-    margin-left: -30px;
+    gap: 5px;
+    padding-left: 0px;
+
 }
 
+
+.listaProducto li {
+    margin-left: 0;
+    padding-left: 0;
+}
