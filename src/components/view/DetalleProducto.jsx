@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 import "../../style/view/DetalleProducto.css"
 import { obtenerProductoId } from '../../helper/productos';
 import { useParams } from 'react-router-dom';
+import useCarrito from '../../hooks/useCarrito';
 
 const DetalleProducto = () => {
 
     const [productoDetalle, setProductoDetalle] = useState({})
     const { id } = useParams()
+    const {agregarCarrito} = useCarrito()
 
     useEffect(() => {
         obtenerProductoId(id).then((respuesta) => {
@@ -52,7 +54,7 @@ const DetalleProducto = () => {
                                     <span>1</span>
                                 </div>
                                 <div>
-                                    <button className='BtnCarrito'>Agregar al carrito</button>
+                                    <button className='BtnCarrito' onClick={()=>{agregarCarrito(productoDetalle)}}>Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
