@@ -9,7 +9,7 @@ const StateCarrito = ({ children }) => {
     const [carrito, setCarrito] = useState([])
     const [productoCarrito, setProductoCarrito] = useState({})
     const [totalCarrito, setTotalCarrito] = useState(0)
-    const [cantidad, seTCantidad] = useState(0)
+    const [cantidad, setCantidad] = useState(1)
 
     return (
         <carritoContext.Provider
@@ -19,7 +19,7 @@ const StateCarrito = ({ children }) => {
                     totalCarrito,
                     setTotalCarrito,
                     cantidad,
-                    seTCantidad,
+                    setCantidad,
                     productoCarrito,
                     setProductoCarrito
                 }

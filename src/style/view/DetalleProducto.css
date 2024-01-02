@@ -43,6 +43,15 @@
     font-size: 25px;
 }
 
+.cantidadProducto input{
+    border: none;
+}
+
+.cantidadProducto input:focus{
+    border: 1px solid transparent;
+    outline: none;
+}
+
 .BtnCarrito{
     padding: 10px 20px;
     border: none;

@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { carritoContext } from '../context/StateCarrito';
 
 const useCarrito = () => {
-    const {carrito,setCarrito,productoCarrito,setProductoCarrito,cantidad} = useContext(carritoContext)
+    const {carrito,setCarrito,productoCarrito,setProductoCarrito} = useContext(carritoContext)
     
-    const agregarCarrito = (producto)=>{
-      const productClone = {...producto,cantidad:1}
-      const productoBuscado = carrito.find(item => item.nombreProducto === productClone.nombreProducto)
+    const agregarCarrito = (producto,cantidad)=>{
+      
+      const productoBuscado = carrito.find(item => item.nombreProducto === producto.nombreProducto)
       if(productoBuscado){
          const productoAgregado = carrito.map((item)=>{
-            if(item.id === productClone.id){
-                return {...item,cantidad: +1}
+            if(item.id === producto.id){
+                return {...item,cantidad:item.cantidad + 1}
             }else{
                 return item
             }
@@ -20,9 +20,8 @@ const useCarrito = () => {
 
       }else{
         console.log("el producto no existe en el carrito")
-        setCarrito([...carrito,producto])
+        setCarrito([...carrito,{...producto,cantidad:cantidad}])
       }
-    // setCarrito([...carrito,producto])
 
     }
  

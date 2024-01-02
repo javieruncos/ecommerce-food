@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect } from 'react';
 import "../../style/view/DetalleProducto.css"
 import { obtenerProductoId } from '../../helper/productos';
 import { useParams } from 'react-router-dom';
 import useCarrito from '../../hooks/useCarrito';
+import { carritoContext } from '../../context/StateCarrito';
 
 const DetalleProducto = () => {
 
     const [productoDetalle, setProductoDetalle] = useState({})
     const { id } = useParams()
+    const {cantidad,setCantidad} = useContext(carritoContext)
     const {agregarCarrito} = useCarrito()
 
     useEffect(() => {
         obtenerProductoId(id).then((respuesta) => {
             console.log(respuesta)
             setProductoDetalle(respuesta.response)
-
         })
     }, [])
+
+
+    const changeCantidad = (e)=>{
+       setCantidad(e.target.value)
+    }
 
     return (
         <section className='container'>
@@ -51,10 +57,13 @@ const DetalleProducto = () => {
                             <span className='fs-3 fuente-detalle'>Cantidad</span>
                             <div className='containerAdd'>
                                 <div className='cantidadProducto '>
-                                    <span>1</span>
+                                   <input type="number" min={1}
+                                    placeholder={cantidad}
+                                     className='w-75' 
+                                     onChange={changeCantidad}/>
                                 </div>
                                 <div>
-                                    <button className='BtnCarrito' onClick={()=>{agregarCarrito(productoDetalle)}}>Agregar al carrito</button>
+                                    <button className='BtnCarrito' onClick={()=>{agregarCarrito(productoDetalle,cantidad)}}>Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
