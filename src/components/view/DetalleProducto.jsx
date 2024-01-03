@@ -22,7 +22,7 @@ const DetalleProducto = () => {
 
 
     const changeCantidad = (e)=>{
-       setCantidad(e.target.value)
+       setCantidad(parseInt(e.target.value))
     }
 
     return (

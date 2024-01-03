@@ -1,7 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import { Navbar ,Container,Nav,NavDropdown} from 'react-bootstrap';
+import ModalCarrito from './ModalCarrito';
 
 const Menu = () => {
+
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
             <Navbar expand="lg" className=" bg-dark navbar-dark">
@@ -23,10 +32,12 @@ const Menu = () => {
                                     Separated link
                                 </NavDropdown.Item>
                             </NavDropdown>
+                            <button onClick={handleShow}>carrito</button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <ModalCarrito show={show} handleClose={handleClose}></ModalCarrito>
         </>
     );
 };
