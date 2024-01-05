@@ -1,0 +1,39 @@
+
+.btnCarrito{
+    margin-top: 5px;
+    height: 30px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btnCarrito span{
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    padding: 0px 8px;
+    background-color: rgb(247, 76, 76);
+    border-radius: 50%;
+    color: white;
+}
+
+@media screen and (max-width:767px){
+    .btnCarrito{
+        width: 50px;
+        margin-top: 5px;
+        height: 30px;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}

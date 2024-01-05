@@ -9,7 +9,7 @@ const StateCarrito = ({ children }) => {
     let carritoLocalStorage =JSON.parse(localStorage.getItem("carritoFood"))  || []
     const [carrito, setCarrito] = useState(carritoLocalStorage)
     const [productoCarrito, setProductoCarrito] = useState({})
-    const [totalCarrito, setTotalCarrito] = useState(0)
+    const [totalCarrito, setTotalCarrito] = useState(carritoLocalStorage.length)
     const [cantidad, setCantidad] = useState(1)
 
     return (

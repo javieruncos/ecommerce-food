@@ -2,30 +2,30 @@ import React, { useContext } from 'react';
 import { carritoContext } from '../context/StateCarrito';
 
 const useCarrito = () => {
-    const {carrito,setCarrito,productoCarrito,setProductoCarrito} = useContext(carritoContext)
+    const {carrito,setCarrito,setCarritototalCarrito,setTotalCarrito} = useContext(carritoContext)
     
     const agregarCarrito = (producto, cantidad) => {
-      const productoBuscado = carrito.find(item => item.nombreProducto === producto.nombreProducto);
-    
+      const productoBuscado = carrito.find((item) => item.id === producto.id);
+
       if (productoBuscado) {
-        const productoAgregado = carrito.map(item => {
-          if (item.id === producto.id) {
-            return { ...item, cantidad: cantidad };
-          } else {
-            return item;
-          }
-        });
-        localStorage.setItem("carritoFood", JSON.stringify([...productoAgregado]));
-        
-        setCarrito([...productoAgregado]);
-      } else {
-        console.log("El producto no existe en el carrito");
-        
-        // Guardar en localStorage antes de actualizar el estado
-        localStorage.setItem("carritoFood", JSON.stringify([...carrito, { ...producto, cantidad: cantidad }]));
+        const carritoActualizado = carrito.map((item) =>
+          item.id === producto.id ? { ...item, cantidad: cantidad } : item
+        );
     
-        setCarrito([...carrito, { ...producto, cantidad: cantidad }]);
+        // Guardar en localStorage después de actualizar el estado
+        localStorage.setItem("carritoFood", JSON.stringify(carritoActualizado));
+    
+        setTotalCarrito(carritoActualizado.length);
+        setCarrito(carritoActualizado);
+      } else {
+        // Guardar en localStorage antes de actualizar el estado
+        const nuevoCarrito = [...carrito, { ...producto, cantidad: cantidad }];
+        localStorage.setItem("carritoFood", JSON.stringify(nuevoCarrito));
+    
+        setTotalCarrito(nuevoCarrito.length);
+        setCarrito(nuevoCarrito);
       }
+      
     };
  
 

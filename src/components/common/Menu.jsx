@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { Navbar ,Container,Nav,NavDropdown} from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import "../../style/NavMenu.css"
 import ModalCarrito from './ModalCarrito';
 
 const Menu = () => {
@@ -13,12 +14,12 @@ const Menu = () => {
 
     return (
         <>
-            <Navbar expand="lg" className=" bg-dark navbar-dark">
+            <Navbar expand="lg" className="bg-dark  navbar-dark menuNavbar">
                 <Container>
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mx-auto">
+                        <Nav className="ms-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#link">Link</Nav.Link>
                             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -32,7 +33,10 @@ const Menu = () => {
                                     Separated link
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <button onClick={handleShow}>carrito</button>
+                            <button onClick={handleShow} className='btnCarrito'>
+                            <i class="bi bi-cart"></i>
+                            <span>2</span>
+                            </button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
