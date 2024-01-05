@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { carritoContext } from "../context/StateCarrito";
 
 const useCarrito = () => {
-  const { carrito, setCarrito, setCarritototalCarrito, setTotalCarrito } =
+  const { carrito, setCarrito,setTotalCarrito ,totalPrecio,setTotalPrecio} =
     useContext(carritoContext);
 
   const agregarCarrito = (producto, cantidad) => {
@@ -19,10 +19,18 @@ const useCarrito = () => {
         (total, item) => total + item.cantidad,
         0
       );
-
       localStorage.setItem("totalCarritoFood",JSON.stringify(totalCarritoProductos));
+
+      const totalPrecioCarrito = carritoActualizado.reduce(
+        (total,item)=> total + item.cantidad * item.precio,0
+      )
+
+      localStorage.setItem("totalPrecioCarrito",JSON.stringify(totalPrecioCarrito));
+      
       setTotalCarrito(totalCarritoProductos);
+      setTotalPrecio(totalPrecioCarrito)
       setCarrito(carritoActualizado);
+
     } else {
 
       // Guardar en localStorage antes de actualizar el estado
@@ -34,9 +42,17 @@ const useCarrito = () => {
         (total, item) => total + item.cantidad,
         0
       );
-
       localStorage.setItem("totalCarritoFood",JSON.stringify(totalCarrito));
+
+
+      const totalPrecioCarrito = carritoActualizado.reduce(
+        (total,item)=> total + item.cantidad * item.precio,0
+      )
+
+      localStorage.setItem("totalPrecioCarrito",JSON.stringify(totalPrecioCarrito));
+
       setTotalCarrito(totalCarrito);
+      setTotalPrecio(totalPrecioCarrito)
       setCarrito(nuevoCarrito);
     }
   };
