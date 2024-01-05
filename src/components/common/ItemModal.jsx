@@ -3,12 +3,9 @@ import React from 'react';
 const ItemModal = ({producto,actualizarCantidad}) => {
 
     const handleChangeCantidad = (event) => {
-        const nuevaCantidad = event.target.value;
+        const nuevaCantidad =parseInt(event.target.value) ;
         actualizarCantidad(producto.id, nuevaCantidad);
       };
-
-
-
 
     return (
         <>

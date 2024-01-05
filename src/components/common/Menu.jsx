@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import "../../style/NavMenu.css"
 import ModalCarrito from './ModalCarrito';
+import { carritoContext } from '../../context/StateCarrito';
 
 const Menu = () => {
-
+   const {totalCarrito} = useContext(carritoContext)
 
     const [show, setShow] = useState(false);
 
@@ -35,7 +36,7 @@ const Menu = () => {
                             </NavDropdown>
                             <button onClick={handleShow} className='btnCarrito'>
                             <i class="bi bi-cart"></i>
-                            <span>2</span>
+                            <span>{totalCarrito}</span>
                             </button>
                         </Nav>
                     </Navbar.Collapse>

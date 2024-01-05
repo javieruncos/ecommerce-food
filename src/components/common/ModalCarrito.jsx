@@ -6,11 +6,11 @@ import ItemModal from './ItemModal';
 
 const ModalCarrito = ({ show, handleClose }) => {
 
-    const { carrito, setCarrito } = useContext(carritoContext)
+    const { carrito, setCarrito,totalCarrito,setTotalCarrito } = useContext(carritoContext)
 
     const actualizarCantidad = (productId, nuevaCantidad) => {
-        setCarrito((producto) =>{
-            const nuevosProductos = carrito.map((producto) => {
+        setCarrito((carritoActual) =>{
+            const nuevosProductos = carritoActual.map((producto) => {
                 if (producto.id === productId) {
                   return { ...producto, cantidad: nuevaCantidad };
                 } else {
@@ -19,9 +19,15 @@ const ModalCarrito = ({ show, handleClose }) => {
               });
               // Actualizar el localStorage
               localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
+              const totalCarritoProductos = nuevosProductos.reduce(
+                (total, item) => total + item.cantidad,
+                0
+              );
+
+              localStorage.setItem("totalCarritoFood", totalCarritoProductos);
+              setTotalCarrito(totalCarritoProductos)
               return nuevosProductos;
         }
-         
         );
       };
 

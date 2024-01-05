@@ -7,9 +7,10 @@ export const carritoContext = createContext()
 
 const StateCarrito = ({ children }) => {
     let carritoLocalStorage =JSON.parse(localStorage.getItem("carritoFood"))  || []
+    let totalProductosLocalS = JSON.parse(localStorage.getItem("totalCarritoFood")) || 0
     const [carrito, setCarrito] = useState(carritoLocalStorage)
     const [productoCarrito, setProductoCarrito] = useState({})
-    const [totalCarrito, setTotalCarrito] = useState(carritoLocalStorage.length)
+    const [totalCarrito, setTotalCarrito] = useState(totalProductosLocalS)
     const [cantidad, setCantidad] = useState(1)
 
     return (
