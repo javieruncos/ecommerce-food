@@ -6,7 +6,7 @@ import ModalCarrito from './ModalCarrito';
 import { carritoContext } from '../../context/StateCarrito';
 
 const Menu = () => {
-   const {totalCarrito} = useContext(carritoContext)
+    const { totalCarrito } = useContext(carritoContext)
 
     const [show, setShow] = useState(false);
 
@@ -35,8 +35,8 @@ const Menu = () => {
                                 </NavDropdown.Item>
                             </NavDropdown>
                             <button onClick={handleShow} className='btnCarrito'>
-                            <i class="bi bi-cart"></i>
-                            <span>{totalCarrito}</span>
+                                <i className="bi bi-cart"></i>
+                                <span>{totalCarrito}</span>
                             </button>
                         </Nav>
                     </Navbar.Collapse>

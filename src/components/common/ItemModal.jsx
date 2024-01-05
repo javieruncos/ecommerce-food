@@ -1,7 +1,8 @@
 import React from 'react';
+import useCarrito from '../../hooks/useCarrito';
 
-const ItemModal = ({producto,actualizarCantidad}) => {
-
+const ItemModal = ({producto}) => {
+    const {actualizarCantidad} = useCarrito()
     const handleChangeCantidad = (event) => {
         const nuevaCantidad =parseInt(event.target.value) ;
         actualizarCantidad(producto.id, nuevaCantidad);

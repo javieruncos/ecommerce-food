@@ -8,28 +8,28 @@ const ModalCarrito = ({ show, handleClose }) => {
 
     const { carrito, setCarrito,totalCarrito,setTotalCarrito } = useContext(carritoContext)
 
-    const actualizarCantidad = (productId, nuevaCantidad) => {
-        setCarrito((carritoActual) =>{
-            const nuevosProductos = carritoActual.map((producto) => {
-                if (producto.id === productId) {
-                  return { ...producto, cantidad: nuevaCantidad };
-                } else {
-                  return producto;
-                }
-              });
-              // Actualizar el localStorage
-              localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
-              const totalCarritoProductos = nuevosProductos.reduce(
-                (total, item) => total + item.cantidad,
-                0
-              );
+    // const actualizarCantidad = (productId, nuevaCantidad) => {
+    //     setCarrito((carritoActual) =>{
+    //         const nuevosProductos = carritoActual.map((producto) => {
+    //             if (producto.id === productId) {
+    //               return { ...producto, cantidad: nuevaCantidad };
+    //             } else {
+    //               return producto;
+    //             }
+    //           });
+    //           // Actualizar el localStorage
+    //           localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
+    //           const totalCarritoProductos = nuevosProductos.reduce(
+    //             (total, item) => total + item.cantidad,
+    //             0
+    //           );
 
-              localStorage.setItem("totalCarritoFood", totalCarritoProductos);
-              setTotalCarrito(totalCarritoProductos)
-              return nuevosProductos;
-        }
-        );
-      };
+    //           localStorage.setItem("totalCarritoFood", totalCarritoProductos);
+    //           setTotalCarrito(totalCarritoProductos)
+    //           return nuevosProductos;
+    //     }
+    //     );
+    //   };
 
     return (
         <Modal show={show} onHide={handleClose}>
@@ -39,7 +39,7 @@ const ModalCarrito = ({ show, handleClose }) => {
             <Modal.Body>
                 {
                     carrito.map((item)=>(
-                        <ItemModal producto={item} key={item.id} actualizarCantidad={actualizarCantidad}></ItemModal>
+                        <ItemModal producto={item} key={item.id}></ItemModal>
                     ))
                 }
             </Modal.Body>
