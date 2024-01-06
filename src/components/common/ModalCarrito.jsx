@@ -6,30 +6,8 @@ import ItemModal from './ItemModal';
 
 const ModalCarrito = ({ show, handleClose }) => {
 
-    const { carrito, setCarrito,totalCarrito,setTotalCarrito } = useContext(carritoContext)
+    const { carrito, setCarrito,totalCarrito,setTotalCarrito ,totalPrecio} = useContext(carritoContext)
 
-    // const actualizarCantidad = (productId, nuevaCantidad) => {
-    //     setCarrito((carritoActual) =>{
-    //         const nuevosProductos = carritoActual.map((producto) => {
-    //             if (producto.id === productId) {
-    //               return { ...producto, cantidad: nuevaCantidad };
-    //             } else {
-    //               return producto;
-    //             }
-    //           });
-    //           // Actualizar el localStorage
-    //           localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
-    //           const totalCarritoProductos = nuevosProductos.reduce(
-    //             (total, item) => total + item.cantidad,
-    //             0
-    //           );
-
-    //           localStorage.setItem("totalCarritoFood", totalCarritoProductos);
-    //           setTotalCarrito(totalCarritoProductos)
-    //           return nuevosProductos;
-    //     }
-    //     );
-    //   };
 
     return (
         <Modal show={show} onHide={handleClose}>
@@ -44,7 +22,11 @@ const ModalCarrito = ({ show, handleClose }) => {
                 }
             </Modal.Body>
             <Modal.Footer>
-                <div className='d-flex justify-content-center align-items-center w-100'>
+                <div className='d-flex justify-content-center align-items-center w-100 flex-column'>
+                    <div className='d-flex justify-content-between w-100 mb-5'>
+                        <span className='fw-bold'>Precio Total</span>
+                        <span className='pe-5 fw-bold'>{totalPrecio}</span>
+                    </div>
                     <button className='btnCompra-carrito'>finalizar compra</button>
                 </div>
             </Modal.Footer>

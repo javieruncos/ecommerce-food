@@ -80,6 +80,14 @@ const useCarrito = () => {
       );
 
       localStorage.setItem("totalCarritoFood", totalCarritoProductos);
+      
+      const totalPrecio = nuevosProductos.reduce(
+        (total,item)=> total + item.cantidad * item.precio ,0
+      )
+
+      localStorage.setItem("totalPrecioCarrito", totalPrecio);
+      
+      setTotalPrecio(totalPrecio)
       setTotalCarrito(totalCarritoProductos);
       return nuevosProductos;
     });
