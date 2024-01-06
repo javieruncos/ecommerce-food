@@ -47,11 +47,10 @@ const DetalleProducto = () => {
                                         <li key={item}>{item},</li>
                                     ))
                                 }
-
                             </ul>
                             <div>
                                 <span className='fs-3 fuente-detalle'>Precio</span>
-                                <p className='fs-3 fw-bold precioDetalle'>$12.00</p>
+                                <p className='fs-3 fw-bold precioDetalle'>${productoDetalle.precio}</p>
                             </div>
 
                             <span className='fs-3 fuente-detalle'>Cantidad</span>

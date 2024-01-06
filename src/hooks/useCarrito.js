@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { carritoContext } from "../context/StateCarrito";
 
 const useCarrito = () => {
-  const { carrito, setCarrito,setTotalCarrito ,totalPrecio,setTotalPrecio} =
+  const { carrito, setCarrito, setTotalCarrito, totalPrecio, setTotalPrecio } =
     useContext(carritoContext);
 
   const agregarCarrito = (producto, cantidad) => {
@@ -19,40 +19,44 @@ const useCarrito = () => {
         (total, item) => total + item.cantidad,
         0
       );
-      localStorage.setItem("totalCarritoFood",JSON.stringify(totalCarritoProductos));
+      localStorage.setItem(
+        "totalCarritoFood",
+        JSON.stringify(totalCarritoProductos)
+      );
 
       const totalPrecioCarrito = carritoActualizado.reduce(
-        (total,item)=> total + item.cantidad * item.precio,0
-      )
+        (total, item) => total + item.cantidad * item.precio,
+        0
+      );
 
       localStorage.setItem("totalPrecioCarrito",JSON.stringify(totalPrecioCarrito));
-      
+
+      setTotalPrecio(totalPrecioCarrito);
       setTotalCarrito(totalCarritoProductos);
-      setTotalPrecio(totalPrecioCarrito)
       setCarrito(carritoActualizado);
-
     } else {
-
       // Guardar en localStorage antes de actualizar el estado
       const nuevoCarrito = [...carrito, { ...producto, cantidad: cantidad }];
-
       localStorage.setItem("carritoFood", JSON.stringify(nuevoCarrito));
 
       const totalCarrito = nuevoCarrito.reduce(
         (total, item) => total + item.cantidad,
         0
       );
-      localStorage.setItem("totalCarritoFood",JSON.stringify(totalCarrito));
+      localStorage.setItem("totalCarritoFood", JSON.stringify(totalCarrito));
 
+      const totalPrecioCarrito = nuevoCarrito.reduce(
+        (total, item) => total + item.cantidad * item.precio,
+        0
+      );
 
-      const totalPrecioCarrito = carritoActualizado.reduce(
-        (total,item)=> total + item.cantidad * item.precio,0
-      )
+      localStorage.setItem(
+        "totalPrecioCarrito",
+        JSON.stringify(totalPrecioCarrito)
+      );
 
-      localStorage.setItem("totalPrecioCarrito",JSON.stringify(totalPrecioCarrito));
-
+      setTotalPrecio(totalPrecioCarrito);
       setTotalCarrito(totalCarrito);
-      setTotalPrecio(totalPrecioCarrito)
       setCarrito(nuevoCarrito);
     }
   };
@@ -60,29 +64,28 @@ const useCarrito = () => {
   // actualizar la cantidad de  productos total dentro del carrito
 
   const actualizarCantidad = (productId, nuevaCantidad) => {
-    setCarrito((carritoActual) =>{
-        const nuevosProductos = carritoActual.map((producto) => {
-            if (producto.id === productId) {
-              return { ...producto, cantidad: nuevaCantidad };
-            } else {
-              return producto;
-            }
-          });
-          // Actualizar el localStorage
-          localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
-          const totalCarritoProductos = nuevosProductos.reduce(
-            (total, item) => total + item.cantidad,
-            0
-          );
+    setCarrito((carritoActual) => {
+      const nuevosProductos = carritoActual.map((producto) => {
+        if (producto.id === productId) {
+          return { ...producto, cantidad: nuevaCantidad };
+        } else {
+          return producto;
+        }
+      });
+      // Actualizar el localStorage
+      localStorage.setItem("carritoFood", JSON.stringify(nuevosProductos));
+      const totalCarritoProductos = nuevosProductos.reduce(
+        (total, item) => total + item.cantidad,
+        0
+      );
 
-          localStorage.setItem("totalCarritoFood", totalCarritoProductos);
-          setTotalCarrito(totalCarritoProductos)
-          return nuevosProductos;
-    }
-    );
+      localStorage.setItem("totalCarritoFood", totalCarritoProductos);
+      setTotalCarrito(totalCarritoProductos);
+      return nuevosProductos;
+    });
   };
 
-  return { agregarCarrito ,actualizarCantidad};
+  return { agregarCarrito, actualizarCantidad };
 };
 
 export default useCarrito;
