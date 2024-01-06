@@ -92,8 +92,29 @@ const useCarrito = () => {
       return nuevosProductos;
     });
   };
+  
+  const eliminarProductoCarrito = (producto)=>{
+    const carritoFiltrado = carrito.filter(item => item.id !== producto.id)
+    if(carritoFiltrado){
 
-  return { agregarCarrito, actualizarCantidad };
+      const nuevaCantidad = carritoFiltrado.reduce(
+       (total,item)=> total + item.cantidad,0
+      )
+
+      const nuevoPrecio = carritoFiltrado.reduce(
+        (total,item)=> total + item.cantidad * item.precio,0
+      )
+
+      localStorage.setItem("carritoFood",JSON.stringify(carritoFiltrado))
+      localStorage.setItem("totalCarritoFood",JSON.stringify(nuevaCantidad))
+      localStorage.setItem("totalPrecioCarrito",JSON.stringify(nuevoPrecio))
+      setTotalCarrito(nuevaCantidad)
+      setTotalPrecio(nuevoPrecio)
+      setCarrito(carritoFiltrado)
+    }
+
+  }
+  return { agregarCarrito, actualizarCantidad ,eliminarProductoCarrito};
 };
 
 export default useCarrito;

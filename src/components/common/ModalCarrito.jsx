@@ -3,10 +3,12 @@ import "../../style/ModalCarrito.css"
 import { Modal, Button } from 'react-bootstrap';
 import { carritoContext } from '../../context/StateCarrito';
 import ItemModal from './ItemModal';
+import useCarrito from '../../hooks/useCarrito';
 
 const ModalCarrito = ({ show, handleClose }) => {
 
-    const { carrito, setCarrito,totalCarrito,setTotalCarrito ,totalPrecio} = useContext(carritoContext)
+    const { carrito,totalPrecio} = useContext(carritoContext)
+    const {eliminarProductoCarrito} = useCarrito()
 
 
     return (
@@ -17,7 +19,7 @@ const ModalCarrito = ({ show, handleClose }) => {
             <Modal.Body>
                 {
                     carrito.map((item)=>(
-                        <ItemModal producto={item} key={item.id}></ItemModal>
+                        <ItemModal producto={item} key={item.id} eliminarProductoCarrito={eliminarProductoCarrito}></ItemModal>
                     ))
                 }
             </Modal.Body>
@@ -25,7 +27,7 @@ const ModalCarrito = ({ show, handleClose }) => {
                 <div className='d-flex justify-content-center align-items-center w-100 flex-column'>
                     <div className='d-flex justify-content-between w-100 mb-5'>
                         <span className='fw-bold'>Precio Total</span>
-                        <span className='pe-5 fw-bold'>{totalPrecio}</span>
+                        <span className='pe-5 fw-bold'>${totalPrecio}</span>
                     </div>
                     <button className='btnCompra-carrito'>finalizar compra</button>
                 </div>

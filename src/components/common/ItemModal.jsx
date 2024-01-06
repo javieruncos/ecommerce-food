@@ -1,7 +1,7 @@
 import React from 'react';
 import useCarrito from '../../hooks/useCarrito';
 
-const ItemModal = ({producto}) => {
+const ItemModal = ({producto,eliminarProductoCarrito}) => {
     const {actualizarCantidad} = useCarrito()
     const handleChangeCantidad = (event) => {
         const nuevaCantidad =parseInt(event.target.value) ;
@@ -23,7 +23,7 @@ const ItemModal = ({producto}) => {
                value={producto.cantidad}
                onChange={handleChangeCantidad}
               />
-              <button className='btnDelete-carrito'>X</button>
+              <button className='btnDelete-carrito' onClick={()=>{eliminarProductoCarrito(producto)}}>X</button>
             </div>
         </div>
         </>

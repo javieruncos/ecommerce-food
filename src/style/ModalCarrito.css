@@ -52,6 +52,14 @@
 
 }
 
+.btnCompra-carrito{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+
 @media screen and (max-width:767px){
     .precioProducto-carrito {
         height: 70px;
