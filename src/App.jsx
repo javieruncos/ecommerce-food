@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MenuProducts from './components/view/MenuProducts'
 import DetalleProducto from './components/view/DetalleProducto'
 import StateCarrito from './context/StateCarrito'
+import Administrador from './components/view/Administrador'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Menu></Menu>
             <Routes>
               <Route path='/' element={<Inicio></Inicio>}></Route>
+              <Route path='/administrador' element={<Administrador></Administrador>}></Route>
               <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
               <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
             </Routes>
