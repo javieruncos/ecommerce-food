@@ -1,24 +1,28 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import "../../style/view/Admin.css"
-import useProducto from '../../hooks/useProducto';
 import ItemTabloProducto from '../products/itemTabloProducto';
 import useFiltroTabla from '../../hooks/useFiltroTabla';
+
 
 const Administrador = () => {
 
     const { handleFiltroChange, productosFiltrados } = useFiltroTabla()
+   
 
     return (
+        <>
+        
+        
         <div className='container'>
             <div className='mt-5 d-flex justify-content-between align-items-center'>
                 <h1>Administrador</h1>
-                <a href='' className='btn-rounded text-dark'>agregar producto</a>
+                <a href='/newProduct' className='btn-rounded text-dark'>agregar producto</a>
             </div>
             <div className='mt-5 searchDiv'>
                 <input type="text" onChange={handleFiltroChange} className='w-50 inputFiltro form-control' />
                 <select className="form-select w-25" aria-label="Default select example"
-                  onChange={handleFiltroChange}
+                    onChange={handleFiltroChange}
                 >
                     <option >Selecciona una categoria</option>
                     <option value="hamburguesa">hamburguesa</option>
@@ -28,25 +32,26 @@ const Administrador = () => {
             </div>
             <div className='mt-5'>
                 <div className='table-responsive'>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>editar/borrar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            productosFiltrados.map((item) =>
-                                <ItemTabloProducto producto={item} key={item.id}></ItemTabloProducto>)
-                        }
-                    </tbody>
-                </Table>
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>editar/borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                productosFiltrados.map((item) =>
+                                    <ItemTabloProducto producto={item} key={item.id}></ItemTabloProducto>)
+                            }
+                        </tbody>
+                    </Table>
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

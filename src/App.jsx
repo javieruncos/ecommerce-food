@@ -8,6 +8,7 @@ import MenuProducts from './components/view/MenuProducts'
 import DetalleProducto from './components/view/DetalleProducto'
 import StateCarrito from './context/StateCarrito'
 import Administrador from './components/view/Administrador'
+import AddProduct from './components/view/AddProduct'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
               <Route path='/' element={<Inicio></Inicio>}></Route>
               <Route path='/administrador' element={<Administrador></Administrador>}></Route>
               <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
+              <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
               <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
             </Routes>
           </BrowserRouter>
