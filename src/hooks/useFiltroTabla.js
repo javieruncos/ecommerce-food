@@ -12,7 +12,8 @@ const useFiltroTabla = () => {
    }
 
    const productosFiltrados =  listaProductos.filter((producto)=>
-      producto.nombreProducto.toLowerCase().includes(productoTabla.toLowerCase())
+      producto.nombreProducto.toLowerCase().includes(productoTabla.toLowerCase()) ||
+      producto.categoria.toLowerCase().includes(productoTabla.toLowerCase())
    )
    
     return {handleFiltroChange,productosFiltrados}

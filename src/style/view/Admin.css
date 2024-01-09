@@ -1,3 +1,7 @@
+.searchDiv{
+  display: flex;
+  justify-content: space-between;
+}
 
 .inputFiltro{
     border: 1px solid grey;
@@ -6,11 +10,10 @@
 
 }
 
-
-
-
-
-
+.searchDiv *:focus{
+   box-shadow: none;
+   border: 1px solid grey;
+}
 
 .btn-rounded{
     padding: 10px 20px;

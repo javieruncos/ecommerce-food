@@ -7,7 +7,7 @@ import useFiltroTabla from '../../hooks/useFiltroTabla';
 
 const Administrador = () => {
 
-    const {handleFiltroChange,productosFiltrados} = useFiltroTabla()
+    const { handleFiltroChange, productosFiltrados } = useFiltroTabla()
 
     return (
         <div className='container'>
@@ -15,10 +15,19 @@ const Administrador = () => {
                 <h1>Administrador</h1>
                 <a href='' className='btn-rounded text-dark'>agregar producto</a>
             </div>
-            <div className='mt-5 '>
-                <input type="text" onChange={handleFiltroChange} className='w-50 inputFiltro' />
+            <div className='mt-5 searchDiv'>
+                <input type="text" onChange={handleFiltroChange} className='w-50 inputFiltro form-control' />
+                <select className="form-select w-25" aria-label="Default select example"
+                  onChange={handleFiltroChange}
+                >
+                    <option >Selecciona una categoria</option>
+                    <option value="hamburguesa">hamburguesa</option>
+                    <option value="pizza">pizza</option>
+                    <option value="pastas">pastas</option>
+                </select>
             </div>
             <div className='mt-5'>
+                <div className='table-responsive'>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -35,6 +44,7 @@ const Administrador = () => {
                         }
                     </tbody>
                 </Table>
+                </div>
             </div>
         </div>
     );
