@@ -35,11 +35,11 @@
       "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!"
     },
     {
-      "id": 3,
       "nombreProducto": "Hamburguesa BBQ",
-      "precio": 7.49,
+      "imagen": "https://static.nike.com/a/images/t_default/057c2bbd-d065-44eb-913f-51dd4f98d680/air-force-1-07-shoe-ZLZpmn.png",
+      "precio": "51",
+      "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!",
       "categoria": "Hamburguesa",
-      "imagen": "url_imagen3.jpg",
       "ingredientes": [
         "Carne de res",
         "Bacon",
@@ -49,7 +49,7 @@
         "Lechuga",
         "Pan"
       ],
-      "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!"
+      "id": 3
     },
     {
       "id": 4,
@@ -69,11 +69,11 @@
       "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!"
     },
     {
-      "id": 5,
       "nombreProducto": "Hamburguesa Doble",
-      "precio": 9.99,
+      "imagen": "https://th.bing.com/th/id/R.f0dfe6bb0560ad2472ca5be8d3e4ca64?rik=w4LPqmEEgVM24g&pid=ImgRaw&r=0",
+      "precio": "55",
+      "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!",
       "categoria": "Hamburguesa",
-      "imagen": "url_imagen5.jpg",
       "ingredientes": [
         "Doble carne de res",
         "Doble queso cheddar",
@@ -81,9 +81,10 @@
         "Tomate",
         "Cebolla",
         "Mayonesa",
-        "Pan"
+        "Pan",
+        ""
       ],
-      "descripcion": "Introducing our Classic Italian Pizza, a tantalizing masterpiece that embodies the essence of Italian gastronomy Crafted with passion and expertise, this pizza is a celebration of traditional flavors and time-honored techniques. Our Classic Italian Pizza starts with a hand-stretched, thin and crispy crust that forms the perfect foundation forthe symphony of flavors to come. Made with the finest quality ingredients, including premium mozzarella cheese, tangy tomato sauce, and a harmonious blend of herbs and spices, every bite delivers an explosion of authentic Italian taste. The secret to our Classic Italian Pizza lies in its simplicity. Each topping is carefully selected to enhancethe overall balance and showcase the natural flavors. From the classic Margherita with fresh basil and ripe tomatoes to the savory Prosciutto e Funghi with earthy mushrooms and delicate prosciutto, our pizza menu offers a variety of mouthwatering options to satisfy every palate. Buon appetito!"
+      "id": 5
     },
     {
       "id": 6,

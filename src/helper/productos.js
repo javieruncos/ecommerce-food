@@ -45,3 +45,34 @@ export const crearProducto =async (dato)=>{
     console.log(error)
   }
 }
+
+
+export const editarProductoApi = async (id,dato)=>{
+    try {
+      const respuesta = await fetch(ulrProductos + "/" + id,{
+         method:"PUT",
+         headers:{
+          "Content-Type": "application/json"
+         },
+         body:JSON.stringify(dato)
+      })
+
+      return respuesta
+    } catch (error) {
+      console.log(error)
+    }
+}
+
+
+export const buscarProductoId = async (id)=>{
+   try {
+      const respuesta = await fetch(ulrProductos + "/" + id)
+      const producto = {
+        dato:await respuesta.json(),
+        status : respuesta.status
+      }
+      return producto
+   } catch (error) {
+     console.log(error)
+   }
+}

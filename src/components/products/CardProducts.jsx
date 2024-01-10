@@ -27,7 +27,6 @@ const CardProducts = ({ producto }) => {
                             <p className='fs-4 fw-bold mt-2'>$ {producto.precio}</p>
                         </div>
                     </div>
-
                 </a>
             </div>
         </>

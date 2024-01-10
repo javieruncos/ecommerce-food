@@ -1,31 +1,43 @@
-import React from 'react';
-import "../../style/view/AddProduct.css"
-import { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Form } from 'react-bootstrap';
-import { Controller } from 'react-hook-form';
-import { useForm } from 'react-hook-form';
-import { crearProducto } from '../../helper/productos';
+import { Controller, useForm } from 'react-hook-form';
+import { useNavigate, useParams } from 'react-router-dom';
+import { buscarProductoId, editarProductoApi } from '../../helper/productos';
+import Swal from 'sweetalert2';
+const EditarProducto = () => {
 
-const AddProduct = () => {
+    const { register, handleSubmit, control, formState: { errors } ,setValue} = useForm()
+    const {id} = useParams()
+    const navigate = useNavigate()
+    
+    useEffect(()=>{
+      buscarProductoId(id).then((respuesta)=>{
+         if(respuesta.status === 200){
+            setValue("nombreProducto", respuesta.dato.nombreProducto)
+            setValue("imagen", respuesta.dato.imagen)
+            setValue("precio", respuesta.dato.precio)
+            setValue("categoria", respuesta.dato.categoria)
+            setValue("ingredientes", respuesta.dato.ingredientes)
+            setValue("descripcion", respuesta.dato.descripcion)
+         }
+      })
+    },[])
 
-    const { register, handleSubmit, control, formState: { errors } } = useForm()
-   
     const onSubmit = (data) => {
         console.log(data)
-        crearProducto(data).then((respuesta)=>{
-            if(respuesta.status === 201){
-                console.log("el producto fue creado correctamente")
-            }else{
-                console.log("error al intentar crear el producto")
+        editarProductoApi(id,data).then((respuesta)=>{
+            if(respuesta.status === 200){
+                Swal.fire("producto editado", "el producto fue editado correctmente", "success")
+                navigate("/administrador")
             }
         })
     }
 
     return (
         <div>
-            <h2 className='text-center my-5'>Nuevo Producto</h2>
-            <div className='container w-100 mt-5'>
-                <form className='d-flex flex-column  mx-auto formAddProduct my-5' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-center my-5'>Editar Producto</h2>
+            <div>
+            <form className='d-flex flex-column  mx-auto formAddProduct my-5' onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Nombre del Producto</Form.Label>
                         <Form.Control type="text"
@@ -76,23 +88,6 @@ const AddProduct = () => {
                         <Form.Text className="text-danger">
 
                         </Form.Text>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-
-
-                        {/* <Form.Select aria-label="Default select example"
-                             {...register("categoria", {
-                                required: "Debe seleccionar una categoria"
-                            })}
-                        >
-                            <option>Selecciona una Categoria</option>
-                            <option value="Hamburguesa">Hamburguesa</option>
-                            <option value="pizza">Pizza</option>
-                            <option value="pasta">Pasta</option>
-                        </Form.Select>
-                        <Form.Text className="text-danger">
-                          {errors.categoria?.message}
-                        </Form.Text> */}
                     </Form.Group>
                     <Form.Group className="mb-3 w" controlId="formBasicEmail">
                         <Form.Label>Descripcion del producto</Form.Label>
@@ -169,11 +164,11 @@ const AddProduct = () => {
                     <Form.Text className="text-danger">
                         {errors.categoria?.message}
                     </Form.Text>
-                    <button className='btn btn-warning w-25 mt-5'>agregar producto</button>
+                    <button className='btn btn-warning w-25 mt-5'>Editar producto</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddProduct;
+export default EditarProducto;

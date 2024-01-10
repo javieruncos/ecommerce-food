@@ -9,7 +9,7 @@ const ItemTabloProducto = ({producto}) => {
                 <td>{producto.precio}</td>
                 <td className='w-25'>
                     <div className=' d-flex gap-4'>
-                        <button className='btn-rounded'>editar</button>
+                        <a href={`/editProduct/${producto.id}`} className='btn-rounded'>editar</a>
                         <button className='btn-rounded bg-danger text-light'>X</button>
                     </div>
                 </td>

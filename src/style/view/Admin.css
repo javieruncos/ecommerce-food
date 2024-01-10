@@ -22,6 +22,7 @@
     background-color: #f5d500;
     transition: 0.5s ease;
     text-decoration: none;
+    color: black;
   }
   
   .btn-rounded:hover{
