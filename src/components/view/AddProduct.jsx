@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Controller } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
+import { crearProducto } from '../../helper/productos';
 
 const AddProduct = () => {
 
@@ -12,6 +13,13 @@ const AddProduct = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+        crearProducto(data).then((respuesta)=>{
+            if(respuesta.status === 201){
+                console.log("el producto fue creado correctamente")
+            }else{
+                console.log("error al intentar crear el producto")
+            }
+        })
     }
 
     return (

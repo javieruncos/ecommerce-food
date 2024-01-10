@@ -24,7 +24,7 @@ const CardProducts = ({ producto }) => {
                                     {producto.ingredientes.map((item, index) => <li key={index}>{item},</li>)}
                                 </ul>
                             </div>
-                            <p className='fs-4 fw-bold mt-2'>$ 14.99 USD</p>
+                            <p className='fs-4 fw-bold mt-2'>$ {producto.precio}</p>
                         </div>
                     </div>
 

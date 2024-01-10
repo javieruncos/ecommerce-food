@@ -23,3 +23,25 @@ export const obtenerProductoId = async (id) => {
     console.log(error);
   }
 };
+
+
+export const crearProducto =async (dato)=>{
+  try {
+    const respuesta = await fetch(ulrProductos,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(dato)
+    })
+
+    const producto = {
+      dato:await respuesta.json(),
+      status : respuesta.status
+    }
+
+    return producto
+  } catch (error) {
+    console.log(error)
+  }
+}
