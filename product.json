@@ -654,17 +654,6 @@
         "queso "
       ],
       "id": 50
-    },
-    {
-      "nombreProducto": "pizza especial",
-      "imagen": "https://static.nike.com/a/images/t_default/057c2bbd-d065-44eb-913f-51dd4f98d680/air-force-1-07-shoe-ZLZpmn.png",
-      "precio": "233",
-      "descripcion": "jadajhsdjhaskhjdakshdkashdkajhsdkajhsdkhaksdhkashdkashdkajajhskda",
-      "categoria": "pizza",
-      "ingredientes": [
-        "queso "
-      ],
-      "id": 51
     }
   ]
 }
