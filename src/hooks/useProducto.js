@@ -1,17 +1,20 @@
-import React, { useEffect,useState } from "react";
-import {obtenerProductos} from "../helper/productos"
+import React, { useEffect, useState } from "react";
+import { EliminarProductoApi, obtenerProductos } from "../helper/productos";
+import Swal from "sweetalert2";
+
 
 const useProducto = () => {
   const [listaProductos, setListaProductos] = useState([]);
+  
 
   useEffect(() => {
-     obtenerProductos().then((respuesta)=>{
-        console.log(respuesta)
-        setListaProductos(respuesta)
-     })
-  },[]);
+    obtenerProductos().then((respuesta) => {
+      console.log(respuesta);
+      setListaProductos(respuesta);
+    });
+  }, []);
 
-  return {listaProductos}
+  return { listaProductos };
 };
 
 export default useProducto;

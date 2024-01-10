@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import "../../style/view/Admin.css"
-import ItemTabloProducto from '../products/itemTabloProducto';
-import useFiltroTabla from '../../hooks/useFiltroTabla';
+import ItemTablaProducto from '../products/ItemTablaProducto';
+import { obtenerProductos } from '../../helper/productos';
 
 
 const Administrador = () => {
+     const [productosApi, setProductosApi] = useState([])
+     const [productoTabla, setProductoTabla] = useState("")
 
-    const { handleFiltroChange, productosFiltrados } = useFiltroTabla()
-   
+    useEffect(()=>{
+      obtenerProductos().then((respuesta)=>{
+        setProductosApi(respuesta)
+      })
+    },[])
+
+    const handleFiltroChange =(e)=>{
+        setProductoTabla(e.target.value)
+     }
+  
+     const productosFiltrados =  productosApi.filter((producto)=>
+        producto.nombreProducto.toLowerCase().includes(productoTabla.toLowerCase()) ||
+        producto.categoria.toLowerCase().includes(productoTabla.toLowerCase())
+     )
 
     return (
         <>
-        
-        
         <div className='container'>
             <div className='mt-5 d-flex justify-content-between align-items-center'>
                 <h1>Administrador</h1>
@@ -44,7 +56,7 @@ const Administrador = () => {
                         <tbody>
                             {
                                 productosFiltrados.map((item) =>
-                                    <ItemTabloProducto producto={item} key={item.id}></ItemTabloProducto>)
+                                    <ItemTablaProducto producto={item} key={item.id} setProductosApi={setProductosApi}></ItemTablaProducto>)
                             }
                         </tbody>
                     </Table>

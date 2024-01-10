@@ -76,3 +76,16 @@ export const buscarProductoId = async (id)=>{
      console.log(error)
    }
 }
+
+
+export const EliminarProductoApi = async(id)=>{
+  try {
+    const respuesta = await fetch(ulrProductos + "/" + id,{
+      method:"DELETE"
+    })
+    return respuesta
+  } catch (error) {
+    console.log(error)
+  }
+    
+}
