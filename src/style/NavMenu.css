@@ -1,4 +1,37 @@
 
+.navMenu a:hover{
+    color: #f5d500;
+}
+
+
+.basic-nav-dropdown{
+    position: relative;
+    border-radius: 10px;
+    background-color: transparent;
+    position: relative;
+}
+
+
+.linkDrop{
+   
+    color: grey;
+}
+
+.linkDrop:hover{
+ color: #f5d500;
+ background-color: transparent;
+}
+
+.containerLink{
+    height: 200px;
+    width: 100%;
+    padding-top: 14px;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+   
+}
+
 .btnCarrito{
     margin-top: 5px;
     height: 30px;
@@ -36,4 +69,35 @@
         align-items: center;
         position: relative;
     }
+    
+    .basic-nav-dropdown{
+        position: relative;
+        border-radius: 10px;
+        background-color: transparent;
+       
+    }
+    
+    
+    .linkDrop{
+        color: black;
+    }
+    
+    .linkDrop:hover{
+     color: #f5d500;
+     background-color: transparent;
+    }
+    
+    .containerLink{
+        height: 180px;
+        width: 100%;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        background-color: transparent;
+        color: black;
+         position: relative;
+        top: -10px;
+        border-radius: 5px;
+       
+    }
+
 }

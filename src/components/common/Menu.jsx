@@ -20,20 +20,29 @@ const Menu = () => {
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
+                        <Nav className="ms-auto d-flex gap-4 navMenu">
+                            <Nav.Link href="/">Inicio</Nav.Link>
+                            <Nav.Link href="/menuProduct">Menu</Nav.Link>
                             <Nav.Link href="/administrador">Administrador</Nav.Link>
                             <Nav.Link href="/ubicacion">Ubicacion</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
+                            <NavDropdown title="Todas las secciones" id="basic-nav-dropdown" className='basic-nav-dropdown'>
+                                <div className='containerLink bg-dark'>
+                                    <NavDropdown.Item href="#action/3.1" className='linkDrop'>
+                                      Inicio
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2" className='linkDrop'>
+                                       Menu
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                        Ubicacion
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                      Nuestro Equipo
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                     Testimonios
+                                    </NavDropdown.Item>
+                                </div>
                             </NavDropdown>
                             <button onClick={handleShow} className='btnCarrito'>
                                 <i className="bi bi-cart"></i>
