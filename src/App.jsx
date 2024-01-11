@@ -14,6 +14,7 @@ import Ubicacion from './components/Ubicacion'
 import PageUbicacion from './components/view/PageUbicacion'
 import Team from './components/view/Team'
 import Testimonios from './components/view/Testimonios'
+import Login from './components/Login'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
               <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
               <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
               <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
+              <Route path='/login' element={<Login></Login>}></Route>
             </Routes>
           </BrowserRouter>
         </div>
