@@ -36,7 +36,7 @@ const Menu = () => {
                                     <NavDropdown.Item href="#action/3.3" className='linkDrop'>
                                         Ubicacion
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                    <NavDropdown.Item href="/team" className='linkDrop'>
                                       Nuestro Equipo
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3" className='linkDrop'>
