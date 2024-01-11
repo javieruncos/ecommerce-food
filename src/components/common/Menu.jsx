@@ -39,7 +39,7 @@ const Menu = () => {
                                     <NavDropdown.Item href="/team" className='linkDrop'>
                                       Nuestro Equipo
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                    <NavDropdown.Item href="/testimonios" className='linkDrop'>
                                      Testimonios
                                     </NavDropdown.Item>
                                 </div>

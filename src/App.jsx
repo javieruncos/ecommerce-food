@@ -13,6 +13,7 @@ import EditarProducto from './components/view/EditarProducto'
 import Ubicacion from './components/Ubicacion'
 import PageUbicacion from './components/view/PageUbicacion'
 import Team from './components/view/Team'
+import Testimonios from './components/view/Testimonios'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
               <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
               <Route path='/ubicacion' element={<PageUbicacion></PageUbicacion>}></Route>
               <Route path='/team' element={<Team></Team>}></Route>
+              <Route path='/testimonios' element={<Testimonios></Testimonios>}></Route>
               <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
               <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
               <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
