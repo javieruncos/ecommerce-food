@@ -15,6 +15,7 @@ import PageUbicacion from './components/view/PageUbicacion'
 import Team from './components/view/Team'
 import Testimonios from './components/view/Testimonios'
 import Login from './components/Login'
+import RegistroUser from './components/RegistroUser'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
               <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
               <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
               <Route path='/login' element={<Login></Login>}></Route>
+              <Route path='/registro' element={<RegistroUser></RegistroUser>}></Route>
             </Routes>
           </BrowserRouter>
         </div>

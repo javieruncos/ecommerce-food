@@ -1,0 +1,47 @@
+.RegistroPage{
+    background-image: url(https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: 100vh;
+ }
+ 
+ .capaRegistro{
+     height: 100vh;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.644);
+ }
+ 
+ 
+ .containerRegistro{
+     width: 400px;
+     border-radius: 10px;
+     background-color: white;
+     box-shadow: 0px 1px 5px 5px rgba(0,0,0,0.17);
+     -webkit-box-shadow: 0px 1px 5px 5px rgba(0,0,0,0.17);
+     -moz-box-shadow: 0px 1px 5px 5px rgba(0,0,0,0.17);
+ }
+ 
+ .containerRegistro form input{
+     border: 1px solid rgba(128, 128, 128, 0.514);
+ }
+ 
+ .containerRegistro form input:focus{
+     box-shadow: none;
+     border: 1px solid rgba(128, 128, 128, 0.514);
+     background-color: transparent;
+ }
+ 
+ .inputRegistro::placeholder{
+    color: red;
+ }
+ 
+ .containerRegistro a{
+     text-decoration: none;
+     color: black;
+ }
+ 
+ .containerRegistro a:hover{
+     color: blue;
+ }
+ 
+ 

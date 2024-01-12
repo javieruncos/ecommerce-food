@@ -1,0 +1,67 @@
+{
+  "Usuarios": [
+    {
+      "nombre": "javier",
+      "apellido": "Uncos",
+      "email": "javier@mail.com",
+      "contraseña": "123456789",
+      "id": 1
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan@mail.com",
+      "contraseña": "123456789",
+      "id": 2
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan1@mail.com",
+      "contraseña": "12345678",
+      "id": 3
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan2@mail.com",
+      "contraseña": "122342342342342342342",
+      "id": 4
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan2@mail.com",
+      "contraseña": "sasdasdasdasdasdasdasdasda",
+      "id": 5
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan3@mail.com",
+      "contraseña": "sdasdasdasdasda",
+      "id": 6
+    },
+    {
+      "nombre": "hernan",
+      "apellido": "uncos",
+      "email": "hernan3@mail.com",
+      "contraseña": "sasdasdasdasdasda",
+      "id": 7
+    },
+    {
+      "nombre": "alfredo",
+      "apellido": "hernandez",
+      "email": "alfredo@mail.com",
+      "contraseña": "sdasdasdasdasdasdasdasdasd",
+      "id": 8
+    },
+    {
+      "nombre": "alfredo",
+      "apellido": "hernandez",
+      "email": "alfredo3@mail.com",
+      "contraseña": "sdasdasdasdasdasdasdsa",
+      "id": 9
+    }
+  ]
+}
