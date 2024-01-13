@@ -82,7 +82,31 @@
     background-color: white;
  }
 
- 
+ .pagination{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    
+ }
+
+ .pagination .page-num{
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400px;
+    color: black;
+    text-decoration: none;
+ }
+
+ .pagination .page-num:hover{
+    background-color: yellow;
+ }
+
+ .pagination .active{
+    background-color: yellow;
+ }
 
  /* ********************************************************************** */
 

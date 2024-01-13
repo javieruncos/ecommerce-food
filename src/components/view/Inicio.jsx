@@ -6,17 +6,22 @@ import SliderGalery from '../SliderGalery';
 import CardProducts from '../products/CardProducts';
 import Ubicacion from '../Ubicacion';
 import useProducto from '../../hooks/useProducto';
+import ReactPaginate from 'react-paginate';
+import usePagination from '../../hooks/usePagination';
 
 const Inicio = () => {
-    const { listaProductos } = useProducto()
+    const {first50Products,currentProducts,setCurrentPage,productsPerPage} = usePagination()
     const { bgImage, indexImg } = useChange()
+    
+    const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected);
+    };
 
     const estilos = {
         backgroundImage: `url(${bgImage[indexImg]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     }
-
 
     return (
         <>
@@ -60,10 +65,26 @@ const Inicio = () => {
                         <h3 className='text-center display-4 fuenteInicio'>Nuestro Menu</h3>
                         <div className='row mt-5'>
                             {
-                                listaProductos.map(producto =>
+                                currentProducts.map(producto =>
                                     <CardProducts producto={producto} key={producto.id}></CardProducts>
                                 )
                             }
+                        </div>
+                        <div className='my-5'>
+                            <ReactPaginate
+                                 pageCount={Math.ceil(first50Products.length / productsPerPage)}
+                                 pageRangeDisplayed={5}
+                                 marginPagesDisplayed={2}
+                                 onPageChange={handlePageClick}
+                                 containerClassName="pagination"
+                                 activeClassName="active"
+                                previousLabel="< Anterior" 
+                                nextLabel="Siguiente >"    
+                                pageLinkClassName='page-num'
+                                previousLinkClassName='page-num'
+                                nextLinkClassName='page-num'
+                                activeLinkClassName='active'
+                            />
                         </div>
                     </div>
                 </article>
