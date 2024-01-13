@@ -33,21 +33,25 @@ export const obtenerUsuarios = async ()=>{
 
 export const loginUsuario = async(usuario)=>{
     try {
-        const respuesta  = await fetch(urlUsuario)
-        const dato = await respuesta.json()
-        const usuarioBuscado = dato.find((item)=> item.email === usuario.email)
-        if(!usuarioBuscado){
-         console.log("el usuario no existe")
-         return false
+        const respuesta  = await fetch(urlUsuario,{
+            method : "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(usuario)
+        })
+
+        if(respuesta.status !== 200){
+            return  false
         }
-     
-        if(usuarioBuscado.contrasenia !== usuario.contrasenia){
-          console.log("contraseña incorrecta")
-          return false
-        }
-        
-        console.log("usuario logueado")
-        return dato
+
+        const usuarioEncontrado ={
+            dato:await respuesta.json(),
+            status:respuesta.status
+        } 
+          
+        return usuarioEncontrado
+       
     } catch (error) {
         console.log(error)
     }

@@ -3,16 +3,26 @@ import "../style/Login.css"
 import useUsuario from '../hooks/useUsuario';
 import { useForm } from 'react-hook-form';
 import { loginUsuario } from '../helper/Usuarios';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const { listaUsuarios } = useUsuario()
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
+    const navigate = useNavigate()
 
    const onSubmitLogin = (data)=>{
     loginUsuario(data).then((respuesta)=>{
         console.log(respuesta)
+        // if(!respuesta){
+        //     console.log("error")
+        // }else{
+        //     console.log(respuesta.dato)
+        // }
+       
     })
+    
    }
 
 
@@ -41,7 +51,7 @@ const Login = () => {
                             </div>
                             <div>
                                 <input type="password" placeholder='contraseña' className='form-control '
-                                    {...register("contrasenia", {
+                                    {...register("contraseña", {
                                         required: "este campo es obligatorio",
                                         minLength: {
                                             value: 8,

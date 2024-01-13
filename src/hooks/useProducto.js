@@ -9,7 +9,7 @@ const useProducto = () => {
 
   useEffect(() => {
     obtenerProductos().then((respuesta) => {
-      console.log(respuesta);
+
       setListaProductos(respuesta);
     });
   }, []);

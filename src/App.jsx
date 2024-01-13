@@ -16,32 +16,41 @@ import Team from './components/view/Team'
 import Testimonios from './components/view/Testimonios'
 import Login from './components/Login'
 import RegistroUser from './components/RegistroUser'
+import StateUsuarios from './context/StateUsuarios'
+import RutasAdmin from './routes/RutasAdmin'
 
 function App() {
 
 
   return (
     <>
-      <StateCarrito>
-        <div className='App'>
-          <BrowserRouter>
-            <Menu></Menu>
-            <Routes>
-              <Route path='/' element={<Inicio></Inicio>}></Route>
-              <Route path='/administrador' element={<Administrador></Administrador>}></Route>
-              <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
-              <Route path='/ubicacion' element={<PageUbicacion></PageUbicacion>}></Route>
-              <Route path='/team' element={<Team></Team>}></Route>
-              <Route path='/testimonios' element={<Testimonios></Testimonios>}></Route>
-              <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
-              <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
-              <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
-              <Route path='/login' element={<Login></Login>}></Route>
-              <Route path='/registro' element={<RegistroUser></RegistroUser>}></Route>
-            </Routes>
-          </BrowserRouter>
-        </div>
-      </StateCarrito>
+      <StateUsuarios>
+        <StateCarrito>
+          <div className='App'>
+            <BrowserRouter>
+              <Menu></Menu>
+              <Routes>
+                <Route path='/' element={<Inicio></Inicio>}></Route>
+                <Route path='/menuProduct' element={<MenuProducts></MenuProducts>}></Route>
+                <Route path='/ubicacion' element={<PageUbicacion></PageUbicacion>}></Route>
+                <Route path='/team' element={<Team></Team>}></Route>
+                <Route path='/testimonios' element={<Testimonios></Testimonios>}></Route>
+                <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
+                <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
+                <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
+                <Route path='/login' element={<Login></Login>}></Route>
+                <Route path='/registro' element={<RegistroUser></RegistroUser>}></Route>
+                <Route path='/administrar/*' element={
+                  <RutasAdmin>
+                    <Administrador></Administrador>
+                  </RutasAdmin>
+                }
+                ></Route>
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </StateCarrito>
+      </StateUsuarios>
     </>
   )
 }
