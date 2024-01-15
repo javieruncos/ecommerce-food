@@ -1,28 +1,30 @@
-.PortadaInicio{
-    height: 560px;
+.PortadaInicio {
+    height: 620px;
     width: 100%;
+    padding-top: 60px;
     background-color: yellow;
     position: relative;
     transition: 1s ease;
-    
+
 }
 
-.fuenteInicio{
+.fuenteInicio {
     font-family: 'Permanent Marker', cursive;
 
 }
 
-.PortadaInicio h1{
+.PortadaInicio h1 {
     font-family: 'Permanent Marker', cursive;
 }
 
-.PortadaInicio :nth-child(2){
+.PortadaInicio :nth-child(2) {
     font-family: 'Permanent Marker', cursive;
 }
 
-.containerTitle-portada{
+.containerTitle-portada {
     height: 560px;
     width: 100%;
+
     background-color: rgba(0, 0, 0, 0.596);
     text-align: center;
     display: flex;
@@ -31,7 +33,7 @@
     align-items: center;
 }
 
-.title-Portada{
+.title-Portada {
     height: 450px;
     width: 800px;
     color: yellow;
@@ -39,14 +41,14 @@
     padding-top: 50px;
 }
 
-.containerBtn-portada{
+.containerBtn-portada {
     display: flex;
     justify-content: center;
     align-items: start;
     gap: 30px;
 }
 
-.btnPortada{
+.btnPortada {
     height: 50px;
     width: 150px;
     border: 1px solid yellow;
@@ -57,12 +59,12 @@
     transition: 0.5s ease;
 }
 
-.btnPortada:hover{
-   background-color: yellow;
-   color: black;
+.btnPortada:hover {
+    background-color: yellow;
+    color: black;
 }
 
-.btnPortada2{
+.btnPortada2 {
     height: 50px;
     width: 150px;
     border: 1px solid yellow;
@@ -73,45 +75,47 @@
     transition: 0.5s ease;
 }
 
-.btnPortada2:hover{
-    background-color:#191919;
+.btnPortada2:hover {
+    background-color: #191919;
     color: yellow;
- }
+}
 
- .seccionGalery{
+.seccionGalery {
     background-color: white;
- }
+}
 
- .pagination{
+
+
+.pagination {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3px;
-    
- }
 
- .pagination .page-num{
+}
+
+.pagination .page-num {
     padding: 8px 15px;
     cursor: pointer;
     border-radius: 3px;
     font-weight: 400px;
     color: black;
     text-decoration: none;
- }
+}
 
- .pagination .page-num:hover{
+.pagination .page-num:hover {
     background-color: yellow;
- }
+}
 
- .pagination .active{
+.pagination .active {
     background-color: yellow;
- }
-
- /* ********************************************************************** */
+}
 
 
- @media (max-width: 320px){
+/* ********************************************************************** */
+
+@media (max-width: 320px) {
     .title-Portada {
         height: 450px;
         width: 312px;
@@ -120,18 +124,19 @@
         padding-top: 50px;
     }
 
-    .seccionGalery{
+    .seccionGalery {
         background-color: white;
-       
-     }
 
-     .titleGaleria{
+    }
+
+    .titleGaleria {
         text-align: center;
         font-size: 14px;
-     }
- }
+    }
+}
 
- @media screen and (min-widht:440px) ,(max-width:767px) {
+@media screen and (min-widht:440px),
+(max-width:767px) {
     .title-Portada {
         height: 450px;
         width: 312px;
@@ -140,13 +145,14 @@
         padding-top: 50px;
     }
 
-    .seccionGalery{
+    .seccionGalery {
         background-color: white;
-       
-     }
 
-     .titleGaleria{
+    }
+
+    .titleGaleria {
         text-align: center;
         font-size: 14px;
-     }
- }
+    }
+
+}

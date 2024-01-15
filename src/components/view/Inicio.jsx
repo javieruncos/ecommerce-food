@@ -10,9 +10,9 @@ import ReactPaginate from 'react-paginate';
 import usePagination from '../../hooks/usePagination';
 
 const Inicio = () => {
-    const {first50Products,currentProducts,setCurrentPage,productsPerPage} = usePagination()
+    const { first50Products, currentProducts, setCurrentPage, productsPerPage } = usePagination()
     const { bgImage, indexImg } = useChange()
-    
+
     const handlePageClick = ({ selected }) => {
         setCurrentPage(selected);
     };
@@ -49,12 +49,14 @@ const Inicio = () => {
             <section className='seccionGalery'>
                 <article className=' pt-5'>
                     <div className='container my-4'>
-                        <div className='titleGaleria'>
+                        <div className='titleGaleria container '>
                             <h3 className='display-3 fuenteInicio'>Galeria</h3>
-                            <p>Síguenos en redes sociales para estar al día con
-                                nuestra ubicación y menú, o ven a visitarnos en <br />
-                                persona ¡y descubre tu nueva comida favorita!
-                            </p>
+                            <div className='galeryText'>
+                                <p>Síguenos en redes sociales para estar al día con
+                                    nuestra ubicación y menú, o ven a visitarnos en
+                                    persona ¡y descubre tu nueva comida favorita!
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <SliderGalery></SliderGalery>
@@ -70,16 +72,16 @@ const Inicio = () => {
                                 )
                             }
                         </div>
-                        <div className='my-5'>
+                        <div className='my-5 '>
                             <ReactPaginate
-                                 pageCount={Math.ceil(first50Products.length / productsPerPage)}
-                                 pageRangeDisplayed={5}
-                                 marginPagesDisplayed={2}
-                                 onPageChange={handlePageClick}
-                                 containerClassName="pagination"
-                                 activeClassName="active"
-                                previousLabel="< Anterior" 
-                                nextLabel="Siguiente >"    
+                                pageCount={Math.ceil(first50Products.length / productsPerPage)}
+                                pageRangeDisplayed={5}
+                                marginPagesDisplayed={2}
+                                onPageChange={handlePageClick}
+                                containerClassName="pagination"
+                                activeClassName="active"
+                                previousLabel="<"
+                                nextLabel=">"
                                 pageLinkClassName='page-num'
                                 previousLinkClassName='page-num'
                                 nextLinkClassName='page-num'

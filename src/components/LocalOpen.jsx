@@ -5,8 +5,8 @@ const LocalOpen = () => {
     return (
         <article>
             <div className='seccion-Open d-flex justify-content-center align-items-center flex-column'>
-                <div className=' pt-4'>
-                    <h2 className='display-2 fw-bold text-center pt-5'>Nuestras Sucursales</h2>
+                <div className=' container w-75'>
+                    <h2 className='display-2 fw-bold text-center pt-4'>Nuestras Sucursales</h2>
                     <p className='text-center'>
                         Disfruta de platos irresistibles llenos de sabores sabrosos. 
                         Nuestra tentadora <br />

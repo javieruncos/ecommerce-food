@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from 'swiper/modules';
 import "swiper/css";
@@ -36,7 +35,7 @@ const imgSlider = [
 
 const SliderGalery = () => {
     return (
-        <div className='mt-4 containerSlide'>
+        <div className='mt-4 containerSlide '>
             <Swiper slidesPerView={3} spaceBetween={30} modules={[Pagination]} loop={true}
                 autoplay={{
                     disableOnInteraction: false,
