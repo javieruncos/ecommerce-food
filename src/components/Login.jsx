@@ -31,7 +31,7 @@ const Login = () => {
         <div className='loginPage'>
             <div className='capaLogin'>
                 <div className='pt-5 container'>
-                    <div className='containerLogin mx-auto container mt-4'>
+                    <div className='containerLogin mx-auto container'>
                         <h2 className='text-center fontGlobal display-6 pt-3'>Iniciar Sesion</h2>
                         <form action="" className='py-3' onSubmit={handleSubmit(onSubmitLogin)}>
                             <div>

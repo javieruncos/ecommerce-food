@@ -28,26 +28,31 @@ const Menu = () => {
                             <NavDropdown title="Todas las secciones" id="basic-nav-dropdown" className='basic-nav-dropdown'>
                                 <div className='containerLink bg-dark'>
                                     <NavDropdown.Item href="#action/3.1" className='linkDrop'>
-                                      Inicio
+                                        Inicio
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2" className='linkDrop'>
-                                       Menu
+                                        Menu
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3" className='linkDrop'>
                                         Ubicacion
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="/team" className='linkDrop'>
-                                      Nuestro Equipo
+                                        Nuestro Equipo
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="/testimonios" className='linkDrop'>
-                                     Testimonios
+                                        Testimonios
                                     </NavDropdown.Item>
                                 </div>
                             </NavDropdown>
-                            <button onClick={handleShow} className='btnCarrito'>
-                                <i className="bi bi-cart"></i>
-                                <span>{totalCarrito}</span>
-                            </button>
+                            <div className='containerBtnNav'>
+                                <a href='/login' className='LinkLogin'>
+                                    <i className="bi bi-person-circle"></i>
+                                </a>
+                                <button onClick={handleShow} className='btnCarrito'>
+                                    <i className="bi bi-cart"></i>
+                                    <span>{totalCarrito}</span>
+                                </button>
+                            </div>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

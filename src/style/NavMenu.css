@@ -7,11 +7,6 @@
 }
 
 
-.navMenu a:hover{
-    color: #f5d500;
-}
-
-
 .basic-nav-dropdown{
     position: relative;
     border-radius: 10px;
@@ -39,6 +34,27 @@
     border-radius: 5px;
    
 }
+
+.containerBtnNav{
+    display: flex;
+    gap: 10px;
+}
+
+
+.LinkLogin{
+    margin-top: 5px;
+    height: 30px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
 
 .btnCarrito{
     margin-top: 5px;
@@ -84,10 +100,14 @@
         background-color: transparent;
        
     }
-    
+
+   .navbar-nav .dropdown-menu{
+    position: sticky;
+      height: 200px;
+}
     
     .linkDrop{
-        color: black;
+        color: grey;
     }
     
     .linkDrop:hover{
@@ -96,7 +116,7 @@
     }
     
     .containerLink{
-        height: 180px;
+        height: 211px;
         width: 100%;
         padding-top: 14px;
         padding-bottom: 20px;
