@@ -3,7 +3,6 @@
     width: 100%;
 }
 
-
 .containerImg-detalle img{
     height: 100%;
     width: 100%;
@@ -13,6 +12,7 @@
 .detalleProducto{
     height: 440px;
     width: 100%;
+ 
 }
 
 .fuente-detalle{

@@ -26,8 +26,8 @@ const DetalleProducto = () => {
     }
 
     return (
-        <section className='container'>
-            <div className='detalleContainer'>
+        <section className='container mt-5'>
+            <div className='detalleContainer '>
                 <div className='row mt-5'>
                     <div className='col-12 col-md-6 col-lg-6'>
                         <div className='containerImg-detalle'>

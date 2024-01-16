@@ -27,13 +27,13 @@ const Menu = () => {
                             <Nav.Link href="/ubicacion">Ubicacion</Nav.Link>
                             <NavDropdown title="Todas las secciones" id="basic-nav-dropdown" className='basic-nav-dropdown'>
                                 <div className='containerLink bg-dark'>
-                                    <NavDropdown.Item href="#action/3.1" className='linkDrop'>
+                                    <NavDropdown.Item href="/" className='linkDrop'>
                                         Inicio
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2" className='linkDrop'>
+                                    <NavDropdown.Item href="/menuProduct" className='linkDrop'>
                                         Menu
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3" className='linkDrop'>
+                                    <NavDropdown.Item href="/ubicacion" className='linkDrop'>
                                         Ubicacion
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="/team" className='linkDrop'>

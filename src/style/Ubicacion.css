@@ -36,3 +36,10 @@
     color: yellow;
     border: 1px solid yellow;
 }
+
+@media screen and (max-width:767px) {
+    .capaUbicacion{
+        text-align: center;
+        font-size: 13px;
+    }
+}

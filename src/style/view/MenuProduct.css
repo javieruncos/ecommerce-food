@@ -75,3 +75,16 @@
     left: 0;
 }
 
+@media screen and (max-width:767px) {
+    .navCategoria-Menu{
+        height: 147px;
+    }
+
+    .navCategoria-Menu div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

@@ -6,7 +6,7 @@ import cubiertos from "../../assets/TablerToolsKitchen2.png"
 const CardProducts = ({ producto }) => {
     return (
         <>
-            <div className='col-12 col-md-4 col-lg-4'>
+            <div className='col-12 col-md-6 col-lg-4'>
                 <a href={`/detalleProducto/${producto.id}`} className='linkCard'>
                     <div className='cardProducts my-4'>
                         <div className='imgCard'>
