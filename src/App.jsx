@@ -18,6 +18,7 @@ import Login from './components/Login'
 import RegistroUser from './components/RegistroUser'
 import StateUsuarios from './context/StateUsuarios'
 import RutasAdmin from './routes/RutasAdmin'
+import FooterMenu from './components/common/FooterMenu'
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
                 }
                 ></Route>
               </Routes>
+              <FooterMenu></FooterMenu>
             </BrowserRouter>
           </div>
         </StateCarrito>

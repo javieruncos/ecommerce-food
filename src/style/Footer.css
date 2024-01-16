@@ -1,0 +1,75 @@
+.containerFooter{
+    width: 100%;
+   color: white;
+}
+
+.coluumnFooter a {
+  text-decoration: none;
+  color: white;
+}
+
+.columnMenu-footer i{
+    color: #f5d500;
+}
+
+.coluumnFooter a:hover{
+    color: yellow;
+}
+
+.columnFooter{
+    height: 150px;
+    width: 100%;
+   
+}
+
+.columnMenu-footer{
+    display: flex;
+    gap: 30px;
+}
+
+.redesFooter i{
+   color: #f5d500;
+}
+
+@media screen and (max-width:767px) {
+
+    .containerFooter{
+        width: 100%;
+       color: white;
+       padding-bottom: 40px;
+    }
+
+    .columnFooter {
+        height: 83px;
+        width: 100%;
+        margin-top: 20px;
+       
+       
+    }
+    .columnMenu-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .columnForm-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redesFooter i{
+        color: #f5d500;
+        font-size: 30px;
+     }
+}
+@media screen and (max-width:991px) {
+    .nameFooter{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    } 
+}
