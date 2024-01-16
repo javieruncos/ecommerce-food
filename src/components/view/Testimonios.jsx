@@ -2,6 +2,7 @@ import React from 'react';
 import "../../style/view/Testimonios.css"
 import { comentariosClientes } from '../../helper/userTestimonios';
 import SliderGalery from '../SliderGalery';
+import { arregloComida, arregloComidasVarias } from '../../helper/galery';
 
 const Testimonios = () => {
     return (
@@ -54,7 +55,8 @@ const Testimonios = () => {
                     </p>
                 </div>
                 <div className='my-5'>
-                    <SliderGalery></SliderGalery>
+                    <SliderGalery imgGalery={arregloComida}></SliderGalery>
+                    <SliderGalery imgGalery={arregloComidasVarias}></SliderGalery>
                 </div>
             </article>
         </section>

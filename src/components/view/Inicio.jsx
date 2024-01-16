@@ -8,6 +8,8 @@ import Ubicacion from '../Ubicacion';
 import useProducto from '../../hooks/useProducto';
 import ReactPaginate from 'react-paginate';
 import usePagination from '../../hooks/usePagination';
+import { arregloComida, arregloComidasVarias } from '../../helper/galery';
+
 
 const Inicio = () => {
     const { first50Products, currentProducts, setCurrentPage, productsPerPage } = usePagination()
@@ -59,8 +61,8 @@ const Inicio = () => {
                             </div>
                         </div>
                     </div>
-                    <SliderGalery></SliderGalery>
-                    <SliderGalery></SliderGalery>
+                    <SliderGalery imgGalery={arregloComida}></SliderGalery>
+                    <SliderGalery imgGalery={arregloComidasVarias}></SliderGalery>
                 </article>
                 <article>
                     <div className='my-5 container'>

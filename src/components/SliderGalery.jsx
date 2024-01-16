@@ -33,7 +33,7 @@ const imgSlider = [
 
 
 
-const SliderGalery = () => {
+const SliderGalery = ({imgGalery}) => {
     return (
         <div className='mt-4 containerSlide '>
             <Swiper slidesPerView={3} spaceBetween={30} modules={[Pagination]} loop={true}
@@ -43,10 +43,10 @@ const SliderGalery = () => {
                 className="mySwiper"
             >
                 {
-                    imgSlider.map((item, index) => 
+                    imgGalery.map((item, index) => 
                         <SwiperSlide >
                             <div className='itemSlide' key={index}>
-                                <img src={item.imagen} alt="imagen de la galeria" />
+                                <img src={item.image} alt="imagen de la galeria" />
                             </div>
                         </SwiperSlide>
                   )
