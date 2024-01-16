@@ -31,6 +31,19 @@
    color: #f5d500;
 }
 
+.redesFooter i:hover{
+  color: white;
+}
+
+.nameFooter div{
+    width: 40px;
+}
+
+.nameFooter img{
+    height: 100%;
+    width: 100%;
+}
+
 @media screen and (max-width:767px) {
 
     .containerFooter{
@@ -42,10 +55,9 @@
     .columnFooter {
         height: 83px;
         width: 100%;
-        margin-top: 20px;
-       
-       
+        margin-bottom: 15px;
     }
+
     .columnMenu-footer{
         display: flex;
         justify-content: center;
@@ -59,11 +71,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 26px;
     }
 
     .redesFooter i{
         color: #f5d500;
         font-size: 30px;
+    
      }
 }
 @media screen and (max-width:991px) {

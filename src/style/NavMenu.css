@@ -1,5 +1,5 @@
 .menuNavbar {
-    padding: 15px;
+    padding: 11px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -75,6 +75,10 @@
     color: white;
 }
 
+.logoFood{
+    height: 40px;
+}
+
 @media screen and (max-width:767px) {
     .btnCarrito {
         width: 50px;
@@ -127,6 +131,7 @@
     }
 
 }
+
 @media screen and (max-width:991px) {
     .btnCarrito {
         width: 50px;

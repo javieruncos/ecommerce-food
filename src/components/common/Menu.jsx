@@ -4,6 +4,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import "../../style/NavMenu.css"
 import ModalCarrito from './ModalCarrito';
 import { carritoContext } from '../../context/StateCarrito';
+import logoFood from "../../assets/logoFood.png"
 
 const Menu = () => {
     const { totalCarrito } = useContext(carritoContext)
@@ -17,7 +18,12 @@ const Menu = () => {
         <>
             <Navbar expand="lg" className="bg-dark  navbar-dark menuNavbar">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <div className='d-flex gap-3 justify-content-center align-items-center pt-1 mb-1'>
+                            <img src={logoFood} alt="" className='logoFood' />
+                            <span className='fontGlobal'>Street Food</span>
+                        </div>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto d-flex gap-4 navMenu">
@@ -52,9 +58,6 @@ const Menu = () => {
                                 <a href='/login' className='LinkLogin'>
                                     <i className="bi bi-person-circle"></i>
                                 </a>
-                                {/* <a href='/registro' className='LinkLogin'>
-                                  <span className='fw-bold'>registro</span>
-                                </a> */}
                             </div>
                         </Nav>
                     </Navbar.Collapse>
