@@ -68,7 +68,7 @@ const Login = () => {
                             <button className='btn btn-warning w-100 mt-4'>Iniciar Sesion</button>
                             <div className='d-flex justify-content-center align-items-center flex-column  mt-3'>
                                 <span>¿No tienes una cuenta?</span>
-                                <a href="/registro">Registrate</a>
+                                <a href="/registro" className='text-primary'>Registrate</a>
                             </div>
                         </form>
                     </div>

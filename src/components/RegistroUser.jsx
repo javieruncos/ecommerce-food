@@ -36,8 +36,8 @@ const RegistroUser = () => {
 
 
     return (
-        <div className='RegistroPage'>
-            <div className='capaRegistro'>
+        <div className='RegistroPage mt-5'>
+            <div className='capaRegistro pt-5'>
                 <div className='pt-5 container'>
                     <div className='containerRegistro mx-auto container '>
                     <h2 className='text-center fontGlobal display-6 py-3'>Registro</h2>

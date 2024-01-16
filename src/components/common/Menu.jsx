@@ -45,13 +45,16 @@ const Menu = () => {
                                 </div>
                             </NavDropdown>
                             <div className='containerBtnNav'>
-                                <a href='/login' className='LinkLogin'>
-                                    <i className="bi bi-person-circle"></i>
-                                </a>
                                 <button onClick={handleShow} className='btnCarrito'>
                                     <i className="bi bi-cart"></i>
                                     <span>{totalCarrito}</span>
                                 </button>
+                                <a href='/login' className='LinkLogin'>
+                                    <i className="bi bi-person-circle"></i>
+                                </a>
+                                {/* <a href='/registro' className='LinkLogin'>
+                                  <span className='fw-bold'>registro</span>
+                                </a> */}
                             </div>
                         </Nav>
                     </Navbar.Collapse>

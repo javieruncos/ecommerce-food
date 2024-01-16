@@ -23,12 +23,22 @@
     color: white;
 }
 
+.capaUbicacion div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .btn-Ubicacion {
     padding: 10px 30px;
     border: 1px solid transparent;
     border-radius: 10px;
     background-color: yellow;
     transition: 0.7s ease;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 .btn-Ubicacion:hover {
