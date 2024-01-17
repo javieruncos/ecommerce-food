@@ -12,14 +12,14 @@ const Testimonios = () => {
                     <img src="https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <div>
                         <div>
-                            <h2 className='display-2 text-center'>Reseñas de Nuestros <br /> Servicios</h2>
+                            <h2 className='display-2 text-center' data-aos="fade-up" >Reseñas de Nuestros <br /> Servicios</h2>
                         </div>
                     </div>
                 </div>
             </article>
             <article>
                 <div className='container mt-5'>
-                    <div className='row'>
+                    <div className='row' data-aos="fade-up">
                         {
                             comentariosClientes.map((item) => {
                                 return <>
@@ -47,8 +47,8 @@ const Testimonios = () => {
                 </div>
             </article>
             <article>
-                <div className='container mt-5'>
-                    <h3 className='display-3 fontGlobal'>Galeria</h3>
+                <div className='container mt-5' data-aos="fade-up">
+                    <h3 className='display-3 fontGlobal' >Galeria</h3>
                     <p>Síguenos en redes sociales para mantenerte al tanto
                         de nuestra ubicación y menú, <br /> ¡o ven a visitarnos
                         en persona y descubre tu nueva comida favorita

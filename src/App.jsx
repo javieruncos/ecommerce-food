@@ -19,8 +19,17 @@ import RegistroUser from './components/RegistroUser'
 import StateUsuarios from './context/StateUsuarios'
 import RutasAdmin from './routes/RutasAdmin'
 import FooterMenu from './components/common/FooterMenu'
+import { useEffect } from 'react'
+import Aos, { init } from 'aos'
+import "aos/dist/aos.css"
 
 function App() {
+
+  useEffect(()=>{
+     Aos,init({
+      duration:1000
+     })
+  },[])
 
 
   return (

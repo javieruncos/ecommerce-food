@@ -5,7 +5,7 @@ const LocalOpen = () => {
     return (
         <article>
             <div className='seccion-Open d-flex justify-content-center align-items-center flex-column'>
-                <div className=' container w-75'>
+                <div className=' container w-75' data-aos="fade-up">
                     <h2 className='display-2 fw-bold text-center pt-4'>Nuestras Sucursales</h2>
                     <p className='text-center'>
                         Disfruta de platos irresistibles llenos de sabores sabrosos. 
@@ -14,7 +14,7 @@ const LocalOpen = () => {
                     </p>
                 </div>
                 <div className='container mt-5'>
-                    <div className='row'>
+                    <div className='row' data-aos="fade-up">
                         <div className='col-12 col-md-6 col-lg-6'>
                             <div className='cardLocales container my-2'>
                                 <div className='d-flex justify-content-between align-items-center pt-4 container'>

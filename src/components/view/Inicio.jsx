@@ -25,15 +25,17 @@ const Inicio = () => {
         backgroundPosition: 'center',
     }
 
+
+
     return (
         <>
             <section>
-                <div style={estilos} className='PortadaInicio'>
-                    <div className='containerTitle-portada'>
+                <div style={estilos} className='PortadaInicio' >
+                    <div className='containerTitle-portada' >
                         <div className='title-Portada'>
-                            <h1 className='display-1 fw-bold'>Disfruta de las delicias auténticas</h1>
-                            <p className='display-1 fw-bold text-light'>street food!</p>
-                            <p className='text-light'>
+                            <h1 className='display-1 fw-bold' data-aos="fade-up">Disfruta de las delicias auténticas</h1>
+                            <p className='display-1 fw-bold text-light'  data-aos="fade-up">street food!</p>
+                            <p className='text-light' data-aos="fade-up">
                                 Nos enorgullece ofrecer una amplia variedad de platos irresistibles elaborados
                                 solo con los ingredientes más frescos y de la más alta calidad.
                             </p>
@@ -51,7 +53,7 @@ const Inicio = () => {
             <section className='seccionGalery'>
                 <article className=' pt-5'>
                     <div className='container my-4'>
-                        <div className='titleGaleria container '>
+                        <div className='titleGaleria container ' data-aos="fade-up">
                             <h3 className='display-3 fuenteInicio'>Galeria</h3>
                             <div className='galeryText'>
                                 <p>Síguenos en redes sociales para estar al día con
@@ -66,8 +68,8 @@ const Inicio = () => {
                 </article>
                 <article>
                     <div className='my-5 container'>
-                        <h3 className='text-center display-4 fuenteInicio'>Nuestro Menu</h3>
-                        <div className='row mt-5'>
+                        <h3 className='text-center display-4 fuenteInicio' data-aos="fade-up">Nuestro Menu</h3>
+                        <div className='row mt-5' data-aos="fade-up">
                             {
                                 currentProducts.map(producto =>
                                     <CardProducts producto={producto} key={producto.id}></CardProducts>

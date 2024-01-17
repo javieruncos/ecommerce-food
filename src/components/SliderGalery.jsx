@@ -30,12 +30,9 @@ const imgSlider = [
     },
 ]
 
-
-
-
 const SliderGalery = ({imgGalery}) => {
     return (
-        <div className='mt-4 containerSlide '>
+        <div className='mt-4 containerSlide ' data-aos="fade-up">
             <Swiper slidesPerView={3} spaceBetween={30} modules={[Pagination]} loop={true}
                 autoplay={{
                     disableOnInteraction: false,

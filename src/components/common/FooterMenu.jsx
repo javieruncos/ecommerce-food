@@ -8,7 +8,7 @@ const FooterMenu = () => {
         <div>
             <div className='containerFooter bg-dark pt-5'>
                 <div className='container pt-4'>
-                    <div className='row'>
+                    <div className='row' data-aos="zoom-in">
                         <div className='col-12 col-md-12 col-lg-3'>
                             <div className='columnFooter'>
                                 <div className='container  columnMenu-footer  nameFooter'>

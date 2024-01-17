@@ -19,8 +19,8 @@ const MenuProducts = () => {
             <div className="PortadaMenu">
                 <img src="https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 <div className=' containerTitle-Menu text-center'>
-                    <h2 className='display-1'>Menu</h2>
-                    <p>
+                    <h2 className='display-1' data-aos="fade-up">Menu</h2>
+                    <p data-aos="fade-up">
                         Bienvenido a nuestro apetitoso blog, donde te
                         llevamos en un viaje a través del vibrante <br /> y
                         delicioso mundo de la comida
@@ -30,7 +30,7 @@ const MenuProducts = () => {
             <article className='mt-5'>
                 <div>
                     <div className='navCategoria-Menu my-4 container'>
-                        <div>
+                        <div data-aos="fade-up">
                             <button className='btn-navMenu' onClick={() => { categoriaFiltrada("All") }}>Todos</button>
                             <button className='btn-navMenu' onClick={() => { categoriaFiltrada("Hamburguesa") }} >hambueguesas</button>
                             <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pasta") }} >Pastas</button>
@@ -42,7 +42,7 @@ const MenuProducts = () => {
             </article>
             <article>
                 <div className='container'>
-                    <div className='row'>
+                    <div className='row' data-aos="fade-up">
                         {
                             (filtro.categoria === "All" ? listaProductos : productosFiltrados).map((item) => (
                                 <CardProducts producto={item} key={item.id} />
