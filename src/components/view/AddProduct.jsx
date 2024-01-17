@@ -37,7 +37,7 @@ const AddProduct = () => {
                                     message: "la cantidad minima de caracteres es de 10 "
                                 },
                                 maxLength: {
-                                    value: 1000,
+                                    value: 100,
                                     message: "la cantidad maxima de caracteres es de 200"
                                 }
 
