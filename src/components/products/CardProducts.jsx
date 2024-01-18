@@ -7,7 +7,7 @@ const CardProducts = ({ producto }) => {
     return (
         <>
             <div className='col-12 col-md-6 col-lg-4'>
-                <a href={`/detalleProducto/${producto.id}`} className='linkCard'>
+                <a href={`/detalleProducto/${producto._id}`} className='linkCard'>
                     <div className='cardProducts my-4'>
                         <div className='imgCard'>
                             <img src="https://images.pexels.com/photos/3738755/pexels-photo-3738755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />

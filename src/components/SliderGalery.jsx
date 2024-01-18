@@ -41,8 +41,8 @@ const SliderGalery = ({imgGalery}) => {
             >
                 {
                     imgGalery.map((item, index) => 
-                        <SwiperSlide >
-                            <div className='itemSlide' key={index}>
+                        <SwiperSlide key={index}>
+                            <div className='itemSlide' >
                                 <img src={item.image} alt="imagen de la galeria" />
                             </div>
                         </SwiperSlide>

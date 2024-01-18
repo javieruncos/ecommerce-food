@@ -29,7 +29,7 @@ const Menu = () => {
                         <Nav className="ms-auto d-flex gap-4 navMenu">
                             <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="/menuProduct">Menu</Nav.Link>
-                            <Nav.Link href="/administrador">Administrador</Nav.Link>
+                            <Nav.Link href="/administrar">Administrador</Nav.Link>
                             <Nav.Link href="/ubicacion">Ubicacion</Nav.Link>
                             <NavDropdown title="Todas las secciones" id="basic-nav-dropdown" className='basic-nav-dropdown'>
                                 <div className='containerLink bg-dark'>

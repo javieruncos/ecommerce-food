@@ -22,8 +22,8 @@ const AddProduct = () => {
     }
 
     return (
-        <div>
-            <h2 className='text-center my-5'>Nuevo Producto</h2>
+        <div className='pt-5'>
+            <h2 className='text-center my-5 pt-5'>Nuevo Producto</h2>
             <div className='container w-100 mt-5'>
                 <form className='d-flex flex-column  mx-auto formAddProduct my-5' onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -78,21 +78,6 @@ const AddProduct = () => {
                         </Form.Text>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-
-
-                        {/* <Form.Select aria-label="Default select example"
-                             {...register("categoria", {
-                                required: "Debe seleccionar una categoria"
-                            })}
-                        >
-                            <option>Selecciona una Categoria</option>
-                            <option value="Hamburguesa">Hamburguesa</option>
-                            <option value="pizza">Pizza</option>
-                            <option value="pasta">Pasta</option>
-                        </Form.Select>
-                        <Form.Text className="text-danger">
-                          {errors.categoria?.message}
-                        </Form.Text> */}
                     </Form.Group>
                     <Form.Group className="mb-3 w" controlId="formBasicEmail">
                         <Form.Label>Descripcion del producto</Form.Label>

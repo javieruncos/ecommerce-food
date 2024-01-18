@@ -37,8 +37,8 @@ const ItemTablaProducto = ({producto,setProductosApi}) => {
                 <td>{producto.precio}</td>
                 <td className='w-25'>
                     <div className=' d-flex gap-4'>
-                        <a href={`/editProduct/${producto.id}`} className='btn-rounded'>editar</a>
-                        <button className='btn-rounded bg-danger text-light' onClick={()=>{borrarProducto(producto.id)}}>X</button>
+                        <a href={`/editProduct/${producto._id}`} className='btn-rounded'>editar</a>
+                        <button className='btn-rounded bg-danger text-light' onClick={()=>{borrarProducto(producto._id)}}>X</button>
                     </div>
                 </td>
             </tr>

@@ -50,12 +50,7 @@ function App() {
                 <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
                 <Route path='/login' element={<Login></Login>}></Route>
                 <Route path='/registro' element={<RegistroUser></RegistroUser>}></Route>
-                <Route path='/administrar/*' element={
-                  <RutasAdmin>
-                    <Administrador></Administrador>
-                  </RutasAdmin>
-                }
-                ></Route>
+                <Route path='/administrar' element={ <Administrador></Administrador>}></Route>
               </Routes>
               <FooterMenu></FooterMenu>
             </BrowserRouter>
