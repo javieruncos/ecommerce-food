@@ -37,9 +37,9 @@ const Administrador = () => {
                     onChange={handleFiltroChange}
                 >
                     <option >Selecciona una categoria</option>
-                    <option value="hamburguesa">hamburguesa</option>
-                    <option value="pizza">pizza</option>
-                    <option value="pastas">pastas</option>
+                    <option value="hamburguesa">Hamburguesa</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="tacos">Tacos</option>
                 </select>
             </div>
             <div className='mt-5'>

@@ -1,22 +1,26 @@
 import React from 'react';
 import "../../style/view/AddProduct.css"
-import { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Controller } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import { crearProducto } from '../../helper/productos';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
 
     const { register, handleSubmit, control, formState: { errors } } = useForm()
+    const navigate = useNavigate()
 
     const onSubmit = (data) => {
         console.log(data)
         crearProducto(data).then((respuesta) => {
             if (respuesta.status === 201) {
                 console.log("el producto fue creado correctamente")
+                Swal.fire("producto creado", "el producto fue creado correctmente", "success")
+                navigate("/administrar")
             } else {
                 console.log("error al intentar crear el producto")
+                Swal.fire("Error", "Error al intentar crear el producto", "error")
             }
         })
     }
@@ -129,7 +133,7 @@ const AddProduct = () => {
 
                         <option value="Hamburguesa">Hamburguesa</option>
                         <option value="pizza">Pizza</option>
-                        <option value="pasta">Pasta</option>
+                        <option value="tacos">Tacos</option>
                     </Form.Select>
                     <Form.Text className="text-danger">
                         {errors.categoria?.message}

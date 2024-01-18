@@ -32,10 +32,9 @@ const MenuProducts = () => {
                     <div className='navCategoria-Menu my-4 container'>
                         <div data-aos="fade-up">
                             <button className='btn-navMenu' onClick={() => { categoriaFiltrada("All") }}>Todos</button>
-                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("Hamburguesa") }} >hambueguesas</button>
-                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pasta") }} >Pastas</button>
-                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pizza") }}>Pizza</button>
-                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pollo") }} >Pollo</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("Hamburguesa") }} >Hambueguesas</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("pizza") }} >Pizza</button>
+                            <button className='btn-navMenu' onClick={() => { categoriaFiltrada("tacos") }}>Tacos</button>
                         </div>
                     </div>
                 </div>

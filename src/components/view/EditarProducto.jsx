@@ -83,7 +83,7 @@ const EditarProducto = () => {
                                     message: " el precio minimo es de 50 "
                                 },
                                 max: {
-                                    value: 1000,
+                                    value: 10000,
                                     message: " el precio maximo es de 1000"
                                 }
 

@@ -26,15 +26,12 @@ const DetalleProducto = () => {
     }
 
     return (
-        <section className='container mt-5'>
+        <section className='container mt-5 pt-4'>
             <div className='detalleContainer '>
                 <div className='row mt-5'>
                     <div className='col-12 col-md-6 col-lg-6'>
                         <div className='containerImg-detalle'>
-                            <img
-                                src="https://images.pexels.com/photos/3738755/pexels-photo-3738755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt=""
-                            />
+                            <img src={productoDetalle.imagen} alt="hamburguesa"/>
                         </div>
                     </div>
                     <div className='col-12 col-md-6 col-lg-6'>
