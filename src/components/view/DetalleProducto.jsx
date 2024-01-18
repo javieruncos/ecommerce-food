@@ -41,13 +41,7 @@ const DetalleProducto = () => {
                         <div className='detalleProducto container '>
                             <span className='d-block fs-1 mb-2 fuente-detalle'>{productoDetalle.nombreProducto}</span>
                             <span className='fs-4 fuente-detalle'>Ingredientes</span>
-                            <ul className='listDetalle'>
-                                {
-                                    productoDetalle?.ingredientes?.map((item) => (
-                                        <li key={item}>{item},</li>
-                                    ))
-                                }
-                            </ul>
+                             <p>{productoDetalle.ingredientes}</p>
                             <div>
                                 <span className='fs-3 fuente-detalle'>Precio</span>
                                 <p className='fs-3 fw-bold precioDetalle'>${productoDetalle.precio}</p>

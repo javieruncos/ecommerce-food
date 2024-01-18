@@ -114,48 +114,19 @@ const EditarProducto = () => {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Ingredientes</Form.Label>
-                        <div className='mb-1'>
-                            <Form.Text className="text-danger">
-                                {errors.ingredientes && errors.ingredientes.message}
-                            </Form.Text>
-                        </div>
-                        <ul>
-                            <Controller
-                                name="ingredientes"
-                                control={control}
-                                defaultValue={[]}
-                                rules={{
-                                    validate: {
-                                        minLength: value => value.length >= 3 || 'Ingresa al menos 3 ingredientes',
-                                    },
-                                }}
-                                render={({ field }) => (
-                                    <>
-                                        {field.value.map((ingrediente, index) => (
-                                            <li key={index}>
-                                                <input
-                                                    type="text"
-                                                    value={ingrediente}
-                                                    className='form-control w-100 my-2'
-                                                    onChange={(e) => {
-                                                        const newIngredientes = [...field.value];
-                                                        newIngredientes[index] = e.target.value;
-                                                        field.onChange(newIngredientes);
-                                                    }}
-                                                />
-                                            </li>
-                                        ))}
-                                        <button
-                                            type="button"
-                                            onClick={() => field.onChange([...field.value, ''])}
-                                            className='btn btn-warning mt-2'
-                                        >
-                                            Agregar Ingrediente
-                                        </button>
-                                    </>
-                                )}
-                            />
-                        </ul>
+                        <textarea name="" id="" className='form-control'
+                           {...register("ingredientes", {
+                            required: "este campo es obligatorio",
+                            minLength: {
+                                value: 50,
+                                message: "la cantidad minima de caracteres es de 50"
+                            },
+                            maxLength: {
+                                value: 1000,
+                                message: "la cantidad maxima de caracteres es de 500"
+                            }
+                        })}
+                        ></textarea>
                     </Form.Group>
                     <Form.Select aria-label="Default select example"
                         {...register("categoria", {

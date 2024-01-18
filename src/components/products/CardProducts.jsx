@@ -20,9 +20,7 @@ const CardProducts = ({ producto }) => {
                         <div className='cardBody-product container pt-2'>
                             <p className='fs-5 fw-bold'>{producto.nombreProducto}</p>
                             <div className='ingrediente'>
-                                <ul className='listaProducto'>
-                                    {producto.ingredientes.map((item, index) => <li key={index}>{item},</li>)}
-                                </ul>
+                             {producto.ingredientes}
                             </div>
                             <p className='fs-4 fw-bold mt-2'>$ {producto.precio}</p>
                         </div>
