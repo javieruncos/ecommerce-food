@@ -6,15 +6,23 @@ import ModalCarrito from './ModalCarrito';
 import { carritoContext } from '../../context/StateCarrito';
 import logoFood from "../../assets/logoFood.png"
 import { usuarioContext } from '../../context/StateUsuarios';
+import { useNavigate } from 'react-router-dom';
 
 const Menu = () => {
     const { usuarioLogueado, setUsuarioLogueado } = useContext(usuarioContext)
-    const { totalCarrito } = useContext(carritoContext)
+    const { totalCarrito } = useContext(carritoContext);
+    const navigate = useNavigate()
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const logout = ()=>{
+        localStorage.removeItem("usuarioFood")
+        setUsuarioLogueado({})
+         navigate("/")
+    }
 
     return (
         <>
@@ -54,15 +62,12 @@ const Menu = () => {
                             {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ?
                                 <>
                                     <Nav.Link href="/administrar">Administrador</Nav.Link>
-                                    <a href='/login' className='LinkLogin'>
-                                        logout
-                                    </a>
                                 </>
                                 : <></>
                             }
 
                             {usuarioLogueado.nombre ? <>
-                                <a href='/login' className='LinkLogin'>
+                                <a href='/login' className='LinkLogin' onClick={logout}>
                                     logout
                                 </a>
                             </> : <>

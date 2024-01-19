@@ -22,6 +22,7 @@ import FooterMenu from './components/common/FooterMenu'
 import { useEffect } from 'react'
 import Aos, { init } from 'aos'
 import "aos/dist/aos.css"
+import RutasProtegidas from './routes/RutasProtegidas'
 
 function App() {
 
@@ -45,12 +46,14 @@ function App() {
                 <Route path='/ubicacion' element={<PageUbicacion></PageUbicacion>}></Route>
                 <Route path='/team' element={<Team></Team>}></Route>
                 <Route path='/testimonios' element={<Testimonios></Testimonios>}></Route>
-                <Route path='/newProduct' element={<AddProduct></AddProduct>}></Route>
-                <Route path='/editProduct/:id' element={<EditarProducto></EditarProducto>}></Route>
                 <Route path='/detalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
                 <Route path='/login' element={<Login></Login>}></Route>
                 <Route path='/registro' element={<RegistroUser></RegistroUser>}></Route>
-                <Route path='/administrar' element={ <Administrador></Administrador>}></Route>
+                <Route path='/administrar/*' element={
+                  <RutasProtegidas>
+                    <RutasAdmin></RutasAdmin>
+                  </RutasProtegidas>
+                }></Route>
               </Routes>
               <FooterMenu></FooterMenu>
             </BrowserRouter>

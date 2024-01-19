@@ -31,29 +31,27 @@ export const obtenerUsuarios = async ()=>{
 }
 
 
-export const loginUsuario = async(usuario)=>{
-    try {
-        const respuesta  = await fetch(urlUsuario,{
-            method : "POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(usuario)
-        })
 
-        if(respuesta.status !== 200){
-            return  false
+export const loginUsuario = async (dato)=>{
+    try {
+        const respuesta = await fetch(urlUsuario);
+        const listaUsuario = await respuesta.json()
+        const usuarioBuscado = listaUsuario.find((user)=> user.email === dato.email)
+
+        if(usuarioBuscado){
+           console.log("el usuario existe")
+           if(usuarioBuscado.contraseña === dato.contraseña){
+            return usuarioBuscado
+           }
+        }else{
+           console.log("el usuario no existe")
+            return
         }
 
-        const usuarioEncontrado ={
-            dato:await respuesta.json(),
-            status:respuesta.status
-        } 
-          
-        return usuarioEncontrado
-       
     } catch (error) {
         console.log(error)
+        return
     }
-  
-}
+} 
+
+

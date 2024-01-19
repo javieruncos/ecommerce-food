@@ -29,7 +29,7 @@ const Administrador = () => {
         <div className='container mt-5 containerAdmin'>
             <div className='pt-5 d-flex justify-content-between align-items-center'>
                 <h1>Administrador</h1>
-                <a href='/newProduct' className='btn-rounded text-dark'>agregar producto</a>
+                <a href='/administrar/newProduct' className='btn-rounded text-dark'>agregar producto</a>
             </div>
             <div className='mt-5 searchDiv'>
                 <input type="text" onChange={handleFiltroChange} className='w-50 inputFiltro form-control' />

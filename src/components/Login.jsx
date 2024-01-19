@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../style/Login.css"
 import useUsuario from '../hooks/useUsuario';
 import { useForm } from 'react-hook-form';
 import { loginUsuario } from '../helper/Usuarios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { usuarioContext } from '../context/StateUsuarios';
 
 const Login = () => {
-
-    const { listaUsuarios } = useUsuario()
+    const {usuarioLogueado,setUsuarioLogueado} = useContext(usuarioContext)
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const navigate = useNavigate()
 
    const onSubmitLogin = (data)=>{
-    loginUsuario(data).then((respuesta)=>{
-        console.log(respuesta)
-        // if(!respuesta){
-        //     console.log("error")
-        // }else{
-        //     console.log(respuesta.dato)
-        // }
-       
-    })
+      loginUsuario(data).then((respuesta)=>{
+         if(respuesta){
+            localStorage.setItem("usuarioFood",JSON.stringify(respuesta))
+            setUsuarioLogueado(respuesta)
+            navigate("/")
+         }else{
+            Swal.fire("El usuario no existe","error nombre o contraseña incorrecta","error")
+         }
+      })
     
    }
 

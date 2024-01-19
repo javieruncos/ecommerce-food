@@ -39,6 +39,14 @@
       "contraseña": "123456789",
       "perfil": "usuario",
       "id": 10
+    },
+    {
+      "nombre": "carlos",
+      "apellido": "medina",
+      "email": "medina@mail.com",
+      "contraseña": "1234567890",
+      "perfil": "usuario",
+      "id": 11
     }
   ]
 }
