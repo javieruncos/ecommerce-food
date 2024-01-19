@@ -5,8 +5,10 @@ import "../../style/NavMenu.css"
 import ModalCarrito from './ModalCarrito';
 import { carritoContext } from '../../context/StateCarrito';
 import logoFood from "../../assets/logoFood.png"
+import { usuarioContext } from '../../context/StateUsuarios';
 
 const Menu = () => {
+    const { usuarioLogueado, setUsuarioLogueado } = useContext(usuarioContext)
     const { totalCarrito } = useContext(carritoContext)
 
     const [show, setShow] = useState(false);
@@ -29,7 +31,6 @@ const Menu = () => {
                         <Nav className="ms-auto d-flex gap-4 navMenu">
                             <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="/menuProduct">Menu</Nav.Link>
-                            <Nav.Link href="/administrar">Administrador</Nav.Link>
                             <Nav.Link href="/ubicacion">Ubicacion</Nav.Link>
                             <NavDropdown title="Todas las secciones" id="basic-nav-dropdown" className='basic-nav-dropdown'>
                                 <div className='containerLink bg-dark'>
@@ -50,14 +51,30 @@ const Menu = () => {
                                     </NavDropdown.Item>
                                 </div>
                             </NavDropdown>
+                            {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ?
+                                <>
+                                    <Nav.Link href="/administrar">Administrador</Nav.Link>
+                                    <a href='/login' className='LinkLogin'>
+                                        logout
+                                    </a>
+                                </>
+                                : <></>
+                            }
+
+                            {usuarioLogueado.nombre ? <>
+                                <a href='/login' className='LinkLogin'>
+                                    logout
+                                </a>
+                            </> : <>
+                                <a href='/login' className='LinkLogin'>
+                                    <i className="bi bi-person-circle"></i>
+                                </a>
+                            </>}
                             <div className='containerBtnNav'>
                                 <button onClick={handleShow} className='btnCarrito'>
                                     <i className="bi bi-cart"></i>
                                     <span>{totalCarrito}</span>
                                 </button>
-                                <a href='/login' className='LinkLogin'>
-                                    <i className="bi bi-person-circle"></i>
-                                </a>
                             </div>
                         </Nav>
                     </Navbar.Collapse>

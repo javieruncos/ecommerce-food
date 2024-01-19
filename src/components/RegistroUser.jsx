@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../style/Registro.css"
 import { useForm } from 'react-hook-form';
 import useUsuario from '../hooks/useUsuario';
 import Swal from 'sweetalert2';
 import { crearUsuario } from '../helper/Usuarios';
 import { useNavigate } from 'react-router-dom';
+import { usuarioContext } from '../context/StateUsuarios';
 
 const RegistroUser = () => {
+    const {usuarioLogueado,setUsuarioLogueado} = useContext(usuarioContext)
     const {listaUsuarios} = useUsuario()
     const { register, handleSubmit, formState: { errors } ,reset} = useForm()
     const navigate = useNavigate()
@@ -14,7 +16,7 @@ const RegistroUser = () => {
 
 
     const onSubmitRegister = (data) => {
-
+        data.perfil = "usuario"
         const usuarioBuscado = listaUsuarios.find((item)=> item.email === data.email)
         if(usuarioBuscado){
             Swal.fire("Error", "el usuario ya existe","error")
@@ -24,9 +26,13 @@ const RegistroUser = () => {
         crearUsuario(data).then((respuesta)=>{
             if(respuesta.status === 201){
                 Swal.fire("Usuario creado", "el usuario se creo correctamente", "success")
+                localStorage.setItem("usuarioFood",JSON.stringify(data))
+                setUsuarioLogueado({...data, perfil:"usuario"})
+                reset()
+                navigate("/")
+            }else{
+                Swal.fire("error inesperado", "intentalo nuevamente en breve", "error")
             }
-            reset()
-            navigate("/")
         })
 
         console.log(data)

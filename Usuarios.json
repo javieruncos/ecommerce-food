@@ -9,17 +9,36 @@
       "id": 1
     },
     {
-      "nombre": "hernan",
-      "apellido": "uncos",
-      "email": "hernan@mail.com",
+      "nombre": "carlos",
+      "apellido": "hernan",
+      "email": "carlos@mail.com",
       "contraseña": "123456789",
-      "perfil": "Usuario",
-      "id": 2
+      "perfil": "usuario",
+      "id": 7
     },
     {
-      "email": "hernan@mail.com",
+      "nombre": "gabriel",
+      "apellido": "lopez",
+      "email": "gaby@mail.com",
       "contraseña": "123456789",
-      "id": 3
+      "perfil": "usuario",
+      "id": 8
+    },
+    {
+      "nombre": "exequiel",
+      "apellido": "lopez",
+      "email": "exe@mail.com",
+      "contraseña": "123456789",
+      "perfil": "usuario",
+      "id": 9
+    },
+    {
+      "nombre": "ana",
+      "apellido": "lopez",
+      "email": "ana@mail.com",
+      "contraseña": "123456789",
+      "perfil": "usuario",
+      "id": 10
     }
   ]
 }
