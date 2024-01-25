@@ -51,7 +51,7 @@ const Login = () => {
                             </div>
                             <div>
                                 <input type="password" placeholder='contraseña' className='form-control '
-                                    {...register("contraseña", {
+                                    {...register("password", {
                                         required: "este campo es obligatorio",
                                         minLength: {
                                             value: 8,
@@ -63,7 +63,7 @@ const Login = () => {
                                         }
                                     })}
                                 />
-                                {errors.contraseña?.message}
+                                {errors.password?.message}
                             </div>
                             <button className='btn btn-warning w-100 mt-4'>Iniciar Sesion</button>
                             <div className='d-flex justify-content-center align-items-center flex-column  mt-3'>

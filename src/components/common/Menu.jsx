@@ -61,7 +61,7 @@ const Menu = () => {
                             </NavDropdown>
                             {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ?
                                 <>
-                                    <Nav.Link href="/administrar">Administrador</Nav.Link>
+                                    <Nav.Link href="/administrark">Administrador</Nav.Link>
                                 </>
                                 : <></>
                             }

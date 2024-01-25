@@ -99,19 +99,19 @@ const RegistroUser = () => {
 
                                 <input type="password" placeholder="Contraseña"
                                     className="form-control"
-                                    {...register("contraseña", {
+                                    {...register("password", {
                                         required: "Este campo es requerido",
                                         minLength: {
                                             value: 8,
                                             message: "La contraseña debe tener al menos 8 caracteres"
                                         },
                                         maxLength: {
-                                            value: 80,
+                                            value: 16,
                                             message: "la contraseña no puede tener mas de 80 caracteres"
                                         }
                                     })}
                                 />
-                                <span className='text-danger'>{errors.contraseña?.message}</span>
+                                <span className='text-danger'>{errors.password?.message}</span>
                             </div>
                             <button className='btn btn-warning w-100 mt-2'>Iniciar Sesion</button>
                             <div className='d-flex justify-content-center align-items-center flex-column  py-3'>

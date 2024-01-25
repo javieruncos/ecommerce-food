@@ -40,7 +40,7 @@ export const loginUsuario = async (dato)=>{
 
         if(usuarioBuscado){
            console.log("el usuario existe")
-           if(usuarioBuscado.contraseña === dato.contraseña){
+           if(usuarioBuscado.password === dato.password){
             return usuarioBuscado
            }
         }else{
