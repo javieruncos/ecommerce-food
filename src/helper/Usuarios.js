@@ -33,25 +33,27 @@ export const obtenerUsuarios = async ()=>{
 
 
 export const loginUsuario = async (dato)=>{
-    try {
-        const respuesta = await fetch(urlUsuario);
-        const listaUsuario = await respuesta.json()
-        const usuarioBuscado = listaUsuario.find((user)=> user.email === dato.email)
 
-        if(usuarioBuscado){
-           console.log("el usuario existe")
-           if(usuarioBuscado.password === dato.password){
-            return usuarioBuscado
-           }
-        }else{
-           console.log("el usuario no existe")
-            return
+    try {
+        const respuesta = await fetch(urlUsuario,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(dato)
+        })
+    
+        const usuario = {
+            data:await respuesta.json(),
+            status:respuesta.status
         }
 
+        return usuario
     } catch (error) {
         console.log(error)
-        return
+        return false
     }
+   
 } 
 
 

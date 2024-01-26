@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../../style/view/AddProduct.css"
 import { Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { crearProducto } from '../../helper/productos';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { usuarioContext } from '../../context/StateUsuarios';
 
 const AddProduct = () => {
-
     const { register, handleSubmit, control, formState: { errors } } = useForm()
     const navigate = useNavigate()
-
+    let usuario = JSON.parse(localStorage.getItem("usuarioFood"))
     const onSubmit = (data) => {
         console.log(data)
-        crearProducto(data).then((respuesta) => {
+        crearProducto(data,usuario.token).then((respuesta) => {
             if (respuesta.status === 201) {
                 console.log("el producto fue creado correctamente")
                 Swal.fire("producto creado", "el producto fue creado correctmente", "success")

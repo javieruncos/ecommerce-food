@@ -18,10 +18,10 @@ const Menu = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const logout = ()=>{
+    const logout = () => {
         localStorage.removeItem("usuarioFood")
         setUsuarioLogueado({})
-         navigate("/")
+        navigate("/")
     }
 
     return (
@@ -59,9 +59,10 @@ const Menu = () => {
                                     </NavDropdown.Item>
                                 </div>
                             </NavDropdown>
-                            {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ?
+                           
+                            {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ? 
                                 <>
-                                    <Nav.Link href="/administrark">Administrador</Nav.Link>
+                                    <Nav.Link href="/administrar">Administrador</Nav.Link>
                                 </>
                                 : <></>
                             }

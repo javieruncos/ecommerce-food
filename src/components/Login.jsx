@@ -13,10 +13,12 @@ const Login = () => {
     const navigate = useNavigate()
 
    const onSubmitLogin = (data)=>{
+
       loginUsuario(data).then((respuesta)=>{
          if(respuesta){
-            localStorage.setItem("usuarioFood",JSON.stringify(respuesta))
-            setUsuarioLogueado(respuesta)
+            console.log(respuesta)
+            localStorage.setItem("usuarioFood",JSON.stringify(respuesta.data))
+            setUsuarioLogueado(respuesta.data)
             navigate("/")
          }else{
             Swal.fire("El usuario no existe","error nombre o contraseña incorrecta","error")

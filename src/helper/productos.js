@@ -24,12 +24,13 @@ export const obtenerProductoId = async (id) => {
 };
 
 
-export const crearProducto =async (dato)=>{
+export const crearProducto =async (dato,token)=>{
   try {
     const respuesta = await fetch(ulrProductos,{
       method:"POST",
       headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"application/json",
+        "x-token":token
       },
       body:JSON.stringify(dato)
     })
