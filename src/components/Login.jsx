@@ -16,7 +16,6 @@ const Login = () => {
 
       loginUsuario(data).then((respuesta)=>{
          if(respuesta){
-            console.log(respuesta)
             localStorage.setItem("usuarioFood",JSON.stringify(respuesta.data))
             setUsuarioLogueado(respuesta.data)
             navigate("/")

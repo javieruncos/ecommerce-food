@@ -9,7 +9,6 @@ const useProducto = () => {
 
   useEffect(() => {
     obtenerProductos().then((respuesta) => {
-
       setListaProductos(respuesta);
     });
   }, []);

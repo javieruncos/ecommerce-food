@@ -15,11 +15,9 @@ const AddProduct = () => {
         console.log(data)
         crearProducto(data,usuario.token).then((respuesta) => {
             if (respuesta.status === 201) {
-                console.log("el producto fue creado correctamente")
                 Swal.fire("producto creado", "el producto fue creado correctmente", "success")
                 navigate("/administrar")
             } else {
-                console.log("error al intentar crear el producto")
                 Swal.fire("Error", "Error al intentar crear el producto", "error")
             }
         })
