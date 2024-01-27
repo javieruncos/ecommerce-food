@@ -27,14 +27,15 @@ function App() {
       duration:1000
      })
   },[])
-
+ 
+  const basename = '';
 
   return (
     <>
       <StateUsuarios>
         <StateCarrito>
           <div className='App'>
-            <BrowserRouter>
+            <BrowserRouter basename={basename}>
               <Menu></Menu>
               <Routes>
                 <Route path='/' element={<Inicio></Inicio>}></Route>
