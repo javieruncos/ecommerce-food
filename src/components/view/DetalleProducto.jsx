@@ -15,6 +15,7 @@ const DetalleProducto = () => {
 
     useEffect(() => {
         obtenerProductoId(id).then((respuesta) => {
+            console.log(respuesta.response)
             setProductoDetalle(respuesta.response)
         })
     }, [])
