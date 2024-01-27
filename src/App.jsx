@@ -7,10 +7,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MenuProducts from './components/view/MenuProducts'
 import DetalleProducto from './components/view/DetalleProducto'
 import StateCarrito from './context/StateCarrito'
-import Administrador from './components/view/Administrador'
-import AddProduct from './components/view/AddProduct'
-import EditarProducto from './components/view/EditarProducto'
-import Ubicacion from './components/Ubicacion'
 import PageUbicacion from './components/view/PageUbicacion'
 import Team from './components/view/Team'
 import Testimonios from './components/view/Testimonios'
@@ -38,7 +34,7 @@ function App() {
       <StateUsuarios>
         <StateCarrito>
           <div className='App'>
-            <BrowserRouter>
+            <BrowserRouter basename={basename}>
               <Menu></Menu>
               <Routes>
                 <Route path='/' element={<Inicio></Inicio>}></Route>
