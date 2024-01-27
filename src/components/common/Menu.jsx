@@ -45,16 +45,16 @@ const Menu = () => {
                                     <NavDropdown.Item href="/" className='linkDrop'>
                                         Inicio
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/menuProduct" className='linkDrop'>
+                                    <NavDropdown.Item href="./menuProduct" className='linkDrop'>
                                         Menu
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/ubicacion" className='linkDrop'>
+                                    <NavDropdown.Item href="./ubicacion" className='linkDrop'>
                                         Ubicacion
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/team" className='linkDrop'>
+                                    <NavDropdown.Item href="./team" className='linkDrop'>
                                         Nuestro Equipo
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item href="/testimonios" className='linkDrop'>
+                                    <NavDropdown.Item href="./testimonios" className='linkDrop'>
                                         Testimonios
                                     </NavDropdown.Item>
                                 </div>
@@ -62,17 +62,17 @@ const Menu = () => {
                            
                             {usuarioLogueado.nombre && usuarioLogueado.perfil !== "usuario" ? 
                                 <>
-                                    <Nav.Link href="/administrar">Administrador</Nav.Link>
+                                    <Nav.Link href="./administrar">Administrador</Nav.Link>
                                 </>
                                 : <></>
                             }
 
                             {usuarioLogueado.nombre ? <>
-                                <a href='/login' className='LinkLogin' onClick={logout}>
+                                <a href='./login' className='LinkLogin' onClick={logout}>
                                     logout
                                 </a>
                             </> : <>
-                                <a href='/login' className='LinkLogin'>
+                                <a href='./login' className='LinkLogin'>
                                     <i className="bi bi-person-circle"></i>
                                 </a>
                             </>}
