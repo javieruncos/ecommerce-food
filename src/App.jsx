@@ -35,7 +35,7 @@ function App() {
       <StateUsuarios>
         <StateCarrito>
           <div className='App'>
-            <BrowserRouter basename={basename}>
+            <BrowserRouter >
               <Menu></Menu>
               <Routes>
                 <Route path='/' element={<Inicio></Inicio>}></Route>
