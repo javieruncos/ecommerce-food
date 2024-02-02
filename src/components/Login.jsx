@@ -13,7 +13,6 @@ const Login = () => {
     const navigate = useNavigate()
 
    const onSubmitLogin = (data)=>{
-
       loginUsuario(data).then((respuesta)=>{
          if(respuesta){
             localStorage.setItem("usuarioFood",JSON.stringify(respuesta.data))
