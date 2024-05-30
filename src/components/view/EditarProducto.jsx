@@ -12,16 +12,17 @@ const EditarProducto = () => {
 
     useEffect(() => {
         buscarProductoId(id).then((respuesta) => {
+            console.log(respuesta.response.datos)
             if (respuesta.status === 200) {
-                setValue("nombreProducto", respuesta.dato.nombreProducto)
-                setValue("imagen", respuesta.dato.imagen)
-                setValue("precio", respuesta.dato.precio)
-                setValue("categoria", respuesta.dato.categoria)
-                setValue("ingredientes", respuesta.dato.ingredientes)
-                setValue("descripcion", respuesta.dato.descripcion)
+                setValue("nombreProducto", respuesta.datos.nombreProducto)
+                setValue("imagen", respuesta.imagen)
+                setValue("precio", respuesta.precio)
+                setValue("categoria", respuesta.categoria)
+                setValue("ingredientes", respuesta.ingredientes)
+                setValue("descripcion", respuesta.descripcion)
             }
         })
-    }, [])
+    },[])
 
     const onSubmit = (data) => {
         console.log(data)
