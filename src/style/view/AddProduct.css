@@ -1,0 +1,31 @@
+.formAddProduct {
+    width: 75%;
+    padding: 40px 40px;
+    border: 1px solid rgba(128, 128, 128, 0.377);
+    box-shadow: -1px 0px 5px 11px rgba(0,0,0,0.09);
+    -webkit-box-shadow: -1px 0px 5px 11px rgba(0,0,0,0.09);
+    -moz-box-shadow: -1px 0px 5px 11px rgba(0,0,0,0.09);
+}
+
+.formInput:focus {
+    box-shadow: none;
+    border: 1px solid grey;
+}
+.formAddProduct ::placeholder{
+    color: red;
+}
+.formAddProduct ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.formAddProduct ul * div{
+    background-color: red;
+}
+
+@media screen and (max-width:767px) {
+    .formAddProduct{
+        width: 100%;
+    }
+    
+}

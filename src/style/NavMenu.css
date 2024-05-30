@@ -1,0 +1,186 @@
+.menuNavbar {
+    padding: 11px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.basic-nav-dropdown {
+    position: relative;
+    border-radius: 10px;
+    background-color: transparent;
+    position: relative;
+}
+
+.linkDrop {
+
+    color: grey;
+}
+
+.linkDrop:hover {
+    color: #f5d500;
+    background-color: transparent;
+}
+
+.containerLink {
+    height: 200px;
+    width: 100%;
+    padding-top: 14px;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+
+}
+
+.containerBtnNav {
+    display: flex;
+    gap: 16px;
+}
+
+.LinkLogin {
+    margin-top: 5px;
+    height: 30px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.btnCarrito {
+    margin-top: 5px;
+    height: 30px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btnCarrito span {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    padding: 0px 8px;
+    background-color: rgb(247, 76, 76);
+    border-radius: 50%;
+    color: white;
+}
+
+.logoFood{
+    height: 40px;
+}
+
+@media screen and (max-width:767px) {
+    .btnCarrito {
+        width: 50px;
+        margin-top: 5px;
+        height: 30px;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .basic-nav-dropdown {
+        position: relative;
+        border-radius: 10px;
+        background-color: transparent;
+
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: sticky;
+        height: 200px;
+        position: relative;
+    }
+
+    .linkDrop {
+        color: grey;
+    }
+
+    .linkDrop:hover {
+        color: #f5d500;
+        background-color: transparent;
+    }
+
+    .containerLink {
+        height: 211px;
+        width: 105%;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        background-color: transparent;
+        color: black;
+        position: absolute;
+        top: -10px;
+        right: -2px;
+        border-radius: 5px;
+        border: 1px solid #252525;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .btnCarrito {
+        width: 50px;
+        margin-top: 5px;
+        height: 30px;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .basic-nav-dropdown {
+        position: relative;
+        border-radius: 10px;
+        background-color: transparent;
+
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: sticky;
+        height: 200px;
+        position: relative;
+    }
+
+    .linkDrop {
+        color: grey;
+    }
+
+    .linkDrop:hover {
+        color: #f5d500;
+        background-color: transparent;
+    }
+
+    .containerLink {
+        height: 211px;
+        width: 105%;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        background-color: transparent;
+        color: black;
+        position: absolute;
+        top: -10px;
+        right: -14px;
+        border-radius: 5px;
+        border: 1px solid #252525;
+    }
+
+}

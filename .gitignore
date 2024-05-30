@@ -13,6 +13,20 @@ dist-ssr
 *.local
 .env
 
+# VITE_APP_USUARIOS=http://localhost:4014/Usuarios
+
+#esta es el puerto de desarrollo
+# VITE_APP_PRODUCTOS=http://localhost:4015/productos
+
+
+
+
+
+# VITE_APP_USUARIOSLOGIN=https://backend-food-ecru.vercel.app/apifood/auth/usuarios/login
+
+# VITE_APP_USUARIOS=http://localhost:4003/apifood/auth
+# VITE_APP_PRODUCTOS=http://localhost:4003/apifood/productos
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

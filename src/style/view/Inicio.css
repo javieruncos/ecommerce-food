@@ -1,0 +1,157 @@
+.PortadaInicio {
+    height: 620px;
+    width: 100%;
+    padding-top: 60px;
+    background-color: yellow;
+    position: relative;
+    transition: 1s ease;
+
+}
+
+.fuenteInicio {
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.PortadaInicio h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.PortadaInicio :nth-child(2) {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.containerTitle-portada {
+    height: 560px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.596);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-Portada {
+    height: 450px;
+    width: 800px;
+    color: yellow;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.containerBtn-portada {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+
+.btnPortada {
+    height: 50px;
+    width: 150px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #191919;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.btnPortada:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.btnPortada2 {
+    height: 50px;
+    width: 150px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: yellow;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.btnPortada2:hover {
+    background-color: #191919;
+    color: yellow;
+}
+
+.seccionGalery {
+    background-color: white;
+}
+
+
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+}
+
+.pagination .page-num {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400px;
+    color: black;
+    text-decoration: none;
+}
+
+.pagination .page-num:hover {
+    background-color: yellow;
+}
+
+.pagination .active {
+    background-color: yellow;
+}
+
+
+/* ********************************************************************** */
+
+@media (max-width: 320px) {
+    .title-Portada {
+        height: 450px;
+        width: 312px;
+        color: yellow;
+        font-weight: bold;
+        padding-top: 50px;
+    }
+
+    .seccionGalery {
+        background-color: white;
+
+    }
+
+    .titleGaleria {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-widht:440px),
+(max-width:767px) {
+    .title-Portada {
+        height: 450px;
+        width: 312px;
+        color: yellow;
+        font-weight: bold;
+        padding-top: 50px;
+    }
+
+    .seccionGalery {
+        background-color: white;
+
+    }
+
+    .titleGaleria {
+        text-align: center;
+        font-size: 14px;
+    }
+
+}

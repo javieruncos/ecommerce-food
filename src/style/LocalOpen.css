@@ -1,0 +1,55 @@
+.seccion-Open{
+    height: 740px;
+    width: 100%;
+    background-color: yellow;
+}
+
+.seccion-Open h2{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.cardLocales{
+    height: 370px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.fechaCard{
+    padding: 10px 20px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.provinciaName{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 23px;
+
+}
+
+.horaCards{
+    font-family: 'Permanent Marker', cursive;
+}
+
+@media screen and (max-width:767px) {
+
+    .cardLocales{
+        height: 400px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .seccion-Open{
+        height: 1240px;
+        width: 100%;
+        background-color: yellow;
+    }
+
+    .provinciaName{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 16px;
+    }
+    
+}

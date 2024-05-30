@@ -1,0 +1,72 @@
+.portadaTestimonios {
+    height: 600px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+}
+
+.portadaTestimonios img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portadaTestimonios div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.411);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.portadaTestimonios h2 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+
+}
+
+.cardTestimonios {
+    height: 220px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.356);
+    border-radius: 10px;
+    box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: -1px 1px 5px 9px rgba(0, 0, 0, 0.06);
+}
+
+.imgUser-testimonio {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgUser-testimonio img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.nameUser-testimonio {
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+@media screen and (max-width:767px) {
+    .portadaTestimonios {
+        height: 350px;
+    }
+
+    .portadaTestimonios h2 {
+        font-size: 35px;
+    }
+}

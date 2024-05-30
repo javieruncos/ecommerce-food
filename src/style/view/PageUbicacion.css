@@ -1,0 +1,68 @@
+/* .PageUbicacion{
+    height: ;
+} */
+.pageUbicacion-title {
+    width: 100%;
+}
+
+.pageUbicacion-title h2 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.containerInput-ubicacion {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.mapa {
+    width: 100%;
+}
+
+
+.containerInput-ubicacion input {
+    width: 49%;
+    border: 1px solid grey;
+}
+
+.containerInput-ubicacion textarea {
+    border: 1px solid grey;
+}
+
+.btnPageUbicacion {
+    padding: 10px 35px;
+    background-color: #f5d500;
+    border: none;
+    border-radius: 10px;
+}
+
+.cardUbicacion {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 17px 6px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 2px 17px 6px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 2px 17px 6px rgba(0, 0, 0, 0.14);
+    font-family: 'Permanent Marker', cursive;
+}
+
+.cardUbicacion a {
+    text-decoration: none;
+    color: black;
+}
+
+.cardUbicacion a:hover {
+    color: #f5d500;
+}
+
+@media screen and (max-width:767px) {
+    .mapa {
+        margin-top: 50px;
+    }
+
+}
